@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lash Create — Support</title>
+<style>
+  :root {
+    --bg: #faf7f4;
+    --fg: #1f1d1a;
+    --muted: #6b6358;
+    --accent: #6b4423;
+    --rule: #e6dfd6;
+    --card: #ffffff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  main {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 48px 24px 96px;
+  }
+  header { margin-bottom: 32px; }
+  .eyebrow {
+    color: var(--accent);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin: 0 0 8px;
+  }
+  h1 {
+    font-size: 32px;
+    line-height: 1.2;
+    margin: 0 0 8px;
+    font-weight: 600;
+  }
+  .lede {
+    color: var(--muted);
+    font-size: 17px;
+    margin: 0;
+  }
+  .contact {
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 32px 0;
+  }
+  .contact strong {
+    display: block;
+    font-size: 14px;
+    color: var(--muted);
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .contact a {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  h2 {
+    font-size: 20px;
+    margin: 40px 0 8px;
+    font-weight: 600;
+  }
+  details {
+    border-top: 1px solid var(--rule);
+    padding: 16px 0;
+  }
+  details:last-of-type { border-bottom: 1px solid var(--rule); }
+  summary {
+    cursor: pointer;
+    font-weight: 600;
+    list-style: none;
+    position: relative;
+    padding-right: 24px;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary::after {
+    content: "+";
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: var(--accent);
+    font-size: 22px;
+    line-height: 1;
+    font-weight: 400;
+    transition: transform .2s;
+  }
+  details[open] summary::after { content: "−"; }
+  details p, details ul {
+    margin: 12px 0 0;
+    color: var(--fg);
+  }
+  details ul { padding-left: 22px; }
+  details li { margin-bottom: 6px; }
+  a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
+  hr {
+    border: 0;
+    border-top: 1px solid var(--rule);
+    margin: 48px 0;
+  }
+  footer {
+    color: var(--muted);
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <p class="eyebrow">Lash Create</p>
+    <h1>Support</h1>
+    <p class="lede">Need a hand? We reply within 1–2 business days.</p>
+  </header>
+
+  <div class="contact">
+    <strong>Email</strong>
+    <a href="mailto:stewartjamespayne@gmail.com">stewartjamespayne@gmail.com</a>
+  </div>
+
+  <h2>Common questions</h2>
+
+  <details>
+    <summary>How do I cancel my subscription?</summary>
+    <p>Subscriptions are managed by Apple. To cancel:</p>
+    <ul>
+      <li>Open <strong>iOS Settings</strong></li>
+      <li>Tap your name at the top → <strong>Subscriptions</strong></li>
+      <li>Tap <strong>Lash Create Premium</strong> → <strong>Cancel Subscription</strong></li>
+    </ul>
+    <p>Your subscription stays active until the end of the current period — Lash Create Premium features keep working until then.</p>
+  </details>
+
+  <details>
+    <summary>How do I restore a purchase on a new device?</summary>
+    <p>If you've reinstalled the app or signed into a new device with the same Apple ID:</p>
+    <ul>
+      <li>Open Lash Create</li>
+      <li>Tap the <strong>(i)</strong> info icon in the editor header</li>
+      <li>Tap <strong>Restore Purchases</strong></li>
+    </ul>
+    <p>If your subscription is still active on your Apple ID, premium will unlock immediately.</p>
+  </details>
+
+  <details>
+    <summary>The app didn't detect my eyes — what do I do?</summary>
+    <p>Eye detection works best when:</p>
+    <ul>
+      <li>Your face is well-lit, with no harsh shadows across the eyes</li>
+      <li>Both eyes are open and clearly visible</li>
+      <li>You're not wearing glasses or thick fringe covering your eyebrows</li>
+      <li>The photo is in portrait orientation with your face roughly centered</li>
+    </ul>
+    <p>If detection still fails, you can position lashes manually by dragging them onto each eye.</p>
+  </details>
+
+  <details>
+    <summary>Are my photos uploaded anywhere?</summary>
+    <p>No. Lash Create has no servers. Photos you take or pick are processed entirely on your device, and your saved designs are stored locally on your phone. We don't run analytics or any third-party tracking.</p>
+    <p>See our <a href="./">Privacy Policy</a> for full details.</p>
+  </details>
+
+  <details>
+    <summary>I was charged but premium isn't unlocking.</summary>
+    <p>Try these in order:</p>
+    <ul>
+      <li>Force-quit and reopen Lash Create — purchase status often refreshes on relaunch</li>
+      <li>Tap the <strong>(i)</strong> icon → <strong>Restore Purchases</strong></li>
+      <li>Confirm the purchase appears under <strong>iOS Settings → your Apple ID → Subscriptions</strong></li>
+    </ul>
+    <p>If premium still hasn't unlocked, email us with a screenshot of your subscription page and we'll sort it.</p>
+  </details>
+
+  <details>
+    <summary>Can I get a refund?</summary>
+    <p>App Store refunds are handled directly by Apple. Visit <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>, sign in with your Apple ID, find your Lash Create purchase, and request a refund.</p>
+  </details>
+
+  <details>
+    <summary>Is Lash Create available on iPad / Mac?</summary>
+    <p>Lash Create runs on iPhone and iPad with iOS / iPadOS 17 or later. It is not currently optimized for Mac.</p>
+  </details>
+
+  <hr>
+  <footer>
+    <span>© 2026 Fat Octopus Apps</span>
+    <a href="./">Privacy Policy</a>
+  </footer>
+</main>
+</body>
+</html>
