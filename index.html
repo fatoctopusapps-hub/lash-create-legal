@@ -76,7 +76,7 @@
   <header>
     <p class="eyebrow">Lash Create</p>
     <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: 7 May 2026</p>
+    <p class="updated">Last updated: 11 May 2026</p>
   </header>
 
   <p>This app is provided by Fat Octopus Apps. This Privacy Policy explains what information Lash Create handles and how.</p>
@@ -88,8 +88,14 @@
   <p>None. Lash Create does not collect any personal data, usage data, device identifiers, location, or contact information. We do not use analytics SDKs, crash reporting SDKs, advertising networks, or any third-party tracking.</p>
 
   <h2>How your photos are handled</h2>
-  <p>When you take a photo with the camera or pick one from your photo library, the image is processed entirely on your device. Photos are never uploaded to a server. The app uses Apple's on-device Vision framework to detect eye positions in your photo so that lashes can be placed correctly.</p>
+  <p>When you take a photo with the camera or pick one from your photo library, the image is processed entirely on your device. Photos are never uploaded to a server.</p>
   <p>Designs you save are stored locally on your device. If you choose to save a design to Photos, that copy is added to your iOS Photos library; nothing is sent anywhere else.</p>
+
+  <h2>Face data</h2>
+  <p>Lash Create uses Apple's on-device Vision framework (specifically <code>VNDetectFaceLandmarksRequest</code>) to automatically detect where each eye sits in a photo you take or select. The detection produces only 2D pixel coordinates that describe the position, approximate width, and rotation angle of each eye in the image.</p>
+  <p>No facial recognition is performed. No biometric identifiers (face descriptors, face vectors, faceprints, or any equivalent) are created, stored, or transmitted. The eye coordinates are used for one purpose only: to automatically place lash extensions on the correct position over each eye so you don't have to drag them into place manually.</p>
+  <p>The eye coordinates exist only in memory during the current editing session. They are not saved to disk, exported, transmitted to a server, shared with any third party, or used for any purpose other than positioning lashes. They are released from memory as soon as you close the editor, open a different photo, or quit the app.</p>
+  <p>If you save a design, the saved file is the composited image (your photo with the lashes drawn on it). The underlying eye coordinates are not included in any saved file.</p>
 
   <h2>Permissions</h2>
   <p>Lash Create requests the following permissions and uses them only for the stated purpose:</p>
