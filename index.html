@@ -50,6 +50,11 @@
     margin: 40px 0 12px;
     font-weight: 600;
   }
+  h3 {
+    font-size: 16px;
+    margin: 24px 0 8px;
+    font-weight: 600;
+  }
   p, li { color: var(--fg); }
   p { margin: 0 0 16px; }
   ul { padding-left: 22px; margin: 0 0 16px; }
@@ -76,33 +81,60 @@
   <header>
     <p class="eyebrow">Lash Create</p>
     <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: 5 June 2026</p>
+    <p class="updated">Last updated: 18 June 2026</p>
   </header>
 
-  <p>This app is provided by Fat Octopus Apps. This Privacy Policy explains what information Lash Create handles and how.</p>
+  <p>This app is provided by Fat Octopus Apps ("we", "us"). This Privacy Policy explains what information Lash Create handles and how. Please read the section that matches how you use the app.</p>
+
+  <h2>Two ways to use Lash Create</h2>
+  <p>Lash Create can be used in two different ways, and the privacy practices differ between them:</p>
+  <ul>
+    <li><strong>The design tool (free &amp; Premium).</strong> Take or pick a photo, try lashes on, and save your designs. This works entirely on your device with <strong>no account</strong> and your images are never uploaded to us.</li>
+    <li><strong>Business plans (salon CRM).</strong> Optional paid plans for lash professionals that add client records, bookings, consultations, and a shared team workspace. These plans <strong>require an account</strong> and store your salon's data in the cloud so it syncs across your devices and your team, and is backed up.</li>
+  </ul>
+  <p>Throughout this policy, "Business plans" means the paid Individual and Salon tiers. If you only use the free or Premium design tool, the account and cloud sections below do not apply to you.</p>
 
   <h2>Summary</h2>
-  <p>Your photos and designs stay on your device — we have no servers or accounts of our own and never upload your images. The app does, however, include the TikTok Business SDK so we can measure how well our advertising performs. Through that SDK the app collects a limited set of device and usage data and shares it with TikTok. Details are below, and you can decline cross-app tracking when prompted.</p>
-
-  <h2>What data we collect</h2>
-  <p>Lash Create itself does not run its own servers, accounts, or analytics. The only data leaving your device comes from the TikTok Business SDK, used solely for advertising measurement and attribution. Through it we collect:</p>
   <ul>
-    <li><strong>Identifiers</strong> — your device's advertising identifier (IDFA), available only if you allow tracking when prompted, plus a TikTok-assigned advertising/device identifier.</li>
-    <li><strong>Purchase activity</strong> — when you start or complete a Premium subscription, the product, price, and currency of that purchase are reported as a conversion event.</li>
-    <li><strong>Usage data</strong> — app installs, launches, and sessions (product interaction), used to attribute and measure ad campaigns.</li>
-    <li><strong>Advertising data</strong> — information about which ad you interacted with and how that ad performed, used to attribute installs and measure campaign results.</li>
-    <li><strong>Device &amp; network information</strong> — standard device and connection details (such as device model, operating-system version, and IP address) collected by the TikTok SDK.</li>
+    <li>The design tool keeps your photos and designs on your device. We have no server copy of your images.</li>
+    <li>Business plans require an email-and-password account and store the salon data you enter (including your clients' details) in the cloud.</li>
+    <li>The app includes the TikTok Business SDK and Firebase Analytics for measuring advertising and improving the app. You can decline cross-app tracking when prompted.</li>
+    <li>Subscriptions are processed by Apple, with subscription status managed through RevenueCat.</li>
   </ul>
-  <p>We do not collect your name, email, contacts, precise location, or the contents of your photos.</p>
 
-  <h2>Advertising, analytics &amp; tracking (TikTok)</h2>
-  <p>We use the TikTok Business SDK to understand which of our ads lead people to install and subscribe, and to measure campaign performance. The data above is shared with TikTok for advertising attribution, measurement, and analytics, and may be used to track you across other companies' apps and websites for these purposes.</p>
-  <p>Because this involves tracking, iOS asks for your permission through the App Tracking Transparency prompt the first time you open the app. If you choose "Ask App Not to Track," your IDFA is not shared and TikTok relies on Apple's privacy-preserving measurement (SKAdNetwork) instead. You can change this any time in <code>Settings → Privacy &amp; Security → Tracking</code>.</p>
-  <p>TikTok's handling of this data is governed by <a href="https://www.tiktok.com/legal/page/global/privacy-policy/en">TikTok's Privacy Policy</a>.</p>
+  <h2>Account information (Business plans)</h2>
+  <p>To use a Business plan you create an account with your email address and a password. Authentication is handled by <strong>Google Firebase Authentication</strong> on our behalf. We use this to:</p>
+  <ul>
+    <li>Create and secure your account, and sign you in across devices.</li>
+    <li>Send a verification email to confirm your address.</li>
+    <li>Send password-reset emails when you request them.</li>
+  </ul>
+  <p>Firebase stores your email and a securely hashed password, and assigns your account a unique identifier. We use that identifier to link your account to your subscription and to your salon. We never see or store your password in readable form.</p>
+
+  <h2>Your salon data in the cloud (Business plans)</h2>
+  <p>When you use a Business plan, the information you enter is stored so it can sync and be backed up. Where it is stored depends on your plan:</p>
+  <ul>
+    <li><strong>Salon plan (team):</strong> data is stored in <strong>Google Cloud Firestore and Firebase Storage</strong> so it can be shared securely across the owner and invited staff.</li>
+    <li><strong>Individual plan (solo):</strong> data is stored in <strong>your own private iCloud</strong> using Apple CloudKit. It stays in your personal Apple account and is not stored on our servers.</li>
+  </ul>
+  <p>The salon data we store on your behalf includes your salon setup (name, services, lash and adhesive brands, styles, pricing, promotions, and message templates), your team members (names and display colours), bookings and appointment history, lash recipes, and your client records (described next).</p>
+
+  <h2>Client information you enter (Business plans)</h2>
+  <p>Business plans let you, as a lash professional, keep records about your own clients. <strong>This is personal information about other people</strong>, so it deserves special care. The records you can store about a client include:</p>
+  <ul>
+    <li><strong>Contact details</strong> — name, phone number, email, address, and social handles (Instagram, WhatsApp), where you choose to enter them.</li>
+    <li><strong>Consultation &amp; health information</strong> — notes such as allergies, sensitivities, eye conditions, lash health, natural-lash retention, patch-test dates, consent status, and intake answers. Some of this is health-related and should be handled accordingly.</li>
+    <li><strong>Appointment &amp; service history</strong> — dates, services, lash styles, products used, payment records, and rebooking dates.</li>
+    <li><strong>Photos</strong> — client profile photos and design snapshots you save against an appointment.</li>
+  </ul>
+  <p><strong>Your responsibilities.</strong> When you enter a client's information you are the controller of that information, and we process it on your behalf to provide the app. You confirm that you have a lawful basis and any necessary consent to store and use your clients' details — including health-related notes — in the app, and that you will respond to your clients' requests about their own data. We act only on your instructions and do not use your client records for any purpose other than running the app for you.</p>
+
+  <h2>Team &amp; staff invites (Salon plan)</h2>
+  <p>A Salon owner can invite staff using a one-time invite code. When a staff member redeems a code, their account is linked to the salon so they can access the shared workspace. The owner controls what staff can see through in-app sharing settings (for example, whether staff can view client photos or health notes), and the owner can revoke a staff member's access at any time. Revoking access removes that person's ability to open the salon on their device.</p>
 
   <h2>How your photos are handled</h2>
-  <p>When you take a photo with the camera or pick one from your photo library, the image is processed entirely on your device. Photos are never uploaded to a server.</p>
-  <p>Designs you save are stored locally on your device. If you choose to save a design to Photos, that copy is added to your iOS Photos library; nothing is sent anywhere else.</p>
+  <p><strong>Design tool:</strong> when you take a photo with the camera or pick one from your library, the image is processed entirely on your device and is never uploaded to us. Designs you save are stored locally; if you choose to save a design to Photos, that copy is added to your iOS Photos library.</p>
+  <p><strong>Business plans:</strong> client profile photos and saved design snapshots are uploaded to your salon's private cloud storage (Firebase Storage for the Salon plan, or your private iCloud for the Individual plan) so they sync to your team and devices. They are stored privately, used only to show those images inside the app, and deleted from storage when you delete the associated client, appointment, or salon.</p>
 
   <h2>Face data</h2>
   <p>Lash Create uses Apple's on-device Vision framework (specifically <code>VNDetectFaceLandmarksRequest</code>) to automatically detect where each eye sits in a photo you take or select. The detection produces only 2D pixel coordinates that describe the position, approximate width, and rotation angle of each eye in the image.</p>
@@ -110,18 +142,52 @@
   <p>The eye coordinates exist only in memory during the current editing session. They are not saved to disk, exported, transmitted to a server, shared with any third party, or used for any purpose other than positioning lashes. They are released from memory as soon as you close the editor, open a different photo, or quit the app.</p>
   <p>If you save a design, the saved file is the composited image (your photo with the lashes drawn on it). The underlying eye coordinates are not included in any saved file.</p>
 
+  <h2>Subscriptions &amp; payments</h2>
+  <p>Lash Create offers auto-renewable subscriptions (Premium for the design tool, and Individual and Salon plans for Business). All payments are processed by Apple via the App Store. We never see your payment information.</p>
+  <p>We use <strong>RevenueCat</strong> to manage subscription status and entitlements. When you subscribe, RevenueCat receives your purchase details from Apple (such as the product, price, currency, and Apple's purchase receipt) and an identifier for your account (your account's unique identifier for Business plans, or an anonymous identifier otherwise). This is used only to determine whether your subscription is active and which features to unlock.</p>
+  <p>Apple's handling of purchase data is governed by <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>, and RevenueCat's by <a href="https://www.revenuecat.com/privacy/">RevenueCat's Privacy Policy</a>.</p>
+
+  <h2>Advertising, analytics &amp; tracking</h2>
+  <p>We use two measurement tools to understand how people find and use the app:</p>
+  <ul>
+    <li><strong>TikTok Business SDK</strong> — measures which of our ads lead people to install and subscribe. Through it we collect your device's advertising identifier (IDFA, only if you allow tracking), a TikTok-assigned identifier, install/launch/session activity, and purchase conversion events (product, price, currency). This data is shared with TikTok and may be used to track you across other companies' apps and websites for advertising attribution.</li>
+    <li><strong>Firebase Analytics (Google)</strong> — measures in-app usage (such as which screens and features are used and the steps of the onboarding and purchase funnels) to improve the app. Events include product identifiers and basic interaction data, not your name, your clients' details, or your photos.</li>
+  </ul>
+  <p>Because the TikTok SDK involves tracking, iOS asks for your permission through the App Tracking Transparency prompt. If you choose "Ask App Not to Track," your IDFA is not shared and measurement relies on Apple's privacy-preserving methods (SKAdNetwork) instead. You can change this any time in <code>Settings → Privacy &amp; Security → Tracking</code>.</p>
+  <p>TikTok's handling of this data is governed by <a href="https://www.tiktok.com/legal/page/global/privacy-policy/en">TikTok's Privacy Policy</a>, and Google's by <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.</p>
+
   <h2>Permissions</h2>
   <p>Lash Create requests the following permissions and uses them only for the stated purpose:</p>
   <ul>
-    <li><strong>Camera</strong> — to capture a new photo for lash design.</li>
+    <li><strong>Camera</strong> — to capture a new photo for lash design or a client record.</li>
     <li><strong>Photos (Read)</strong> — to let you pick an existing photo from your library.</li>
     <li><strong>Photos (Add)</strong> — to save your finished designs to your iOS Photos library when you choose to.</li>
+    <li><strong>Notifications</strong> — if you enable them, to remind you about upcoming appointments and rebookings. These reminders are scheduled on your device.</li>
   </ul>
   <p>You can revoke any of these permissions at any time in iOS Settings.</p>
 
-  <h2>In-app purchases</h2>
-  <p>Lash Create offers an auto-renewable Premium subscription processed entirely by Apple via StoreKit. We do not see your payment information. Apple handles billing, receipts, and renewals. Your purchase status is stored on your device only.</p>
-  <p>Apple's handling of purchase data is governed by <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</p>
+  <h2>Service providers</h2>
+  <p>We share data only with the providers needed to run the app, and only for that purpose:</p>
+  <ul>
+    <li><strong>Apple</strong> — App Store payments and (for the Individual plan) iCloud/CloudKit storage.</li>
+    <li><strong>Google (Firebase)</strong> — account authentication, cloud database (Firestore), file storage (Firebase Storage), and analytics, for Business plans and app measurement.</li>
+    <li><strong>RevenueCat</strong> — subscription status and entitlement management.</li>
+    <li><strong>TikTok</strong> — advertising measurement and attribution.</li>
+  </ul>
+
+  <h2>Data retention &amp; deletion</h2>
+  <p>You stay in control of your data:</p>
+  <ul>
+    <li><strong>Client and salon records.</strong> You can delete individual clients, appointments, or other records from inside the app at any time; deleting a record also deletes its associated photos from cloud storage.</li>
+    <li><strong>Your account and salon.</strong> To delete your account and the salon data associated with it, contact us at <a href="mailto:fatoctopusapps@gmail.com">fatoctopusapps@gmail.com</a> and we will delete it. Individual-plan data lives in your own iCloud and can also be removed from your Apple account.</li>
+    <li><strong>Subscriptions.</strong> You can cancel any time in iOS Settings; cancelling does not delete your data.</li>
+  </ul>
+
+  <h2>Security</h2>
+  <p>Data sent to and from the cloud is encrypted in transit. Account access is protected by your email and password, and salon data is restricted so that only the salon's active owner and staff can access it. No method of storage or transmission is completely secure, but we take reasonable steps to protect your information.</p>
+
+  <h2>International transfers</h2>
+  <p>Our service providers, including Google, RevenueCat, and TikTok, may process data on servers located in the United States and other countries. Where data is transferred internationally, those providers apply appropriate safeguards.</p>
 
   <h2>Children</h2>
   <p>Lash Create is not directed to children. We do not knowingly collect personal information from children under 13, and the advertising measurement described above relies on tracking only where permission has been granted through iOS. If you believe a child has used the app, contact us and we will help.</p>
@@ -130,7 +196,7 @@
   <p>We may update this Privacy Policy from time to time. The latest version will always be available at this URL. The "Last updated" date above will reflect any changes.</p>
 
   <h2>Contact</h2>
-  <p>Questions about this Privacy Policy? Email <a href="mailto:fatoctopusapps@gmail.com">fatoctopusapps@gmail.com</a> — we reply within 1–2 business days.</p>
+  <p>Questions about this Privacy Policy, or a request about your data? Email <a href="mailto:fatoctopusapps@gmail.com">fatoctopusapps@gmail.com</a> — we reply within 1–2 business days.</p>
 
   <hr>
   <footer>© 2026 Fat Octopus Apps</footer>
