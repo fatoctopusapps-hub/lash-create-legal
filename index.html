@@ -81,7 +81,7 @@
   <header>
     <p class="eyebrow">Lash Create</p>
     <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: 18 June 2026</p>
+    <p class="updated">Last updated: 20 June 2026</p>
   </header>
 
   <p>This app is provided by Fat Octopus Apps ("we", "us"). This Privacy Policy explains what information Lash Create handles and how. Please read the section that matches how you use the app.</p>
@@ -98,6 +98,7 @@
   <ul>
     <li>The design tool keeps your photos and designs on your device. We have no server copy of your images.</li>
     <li>Business plans require an email-and-password account and store the salon data you enter (including your clients' details) in the cloud.</li>
+    <li>Business plans can optionally publish a public booking page. It shows the salon details you choose (including an optional cover photo), and lets clients send you a booking request with their contact details.</li>
     <li>The app includes the TikTok Business SDK and Firebase Analytics for measuring advertising and improving the app. You can decline cross-app tracking when prompted.</li>
     <li>Subscriptions are processed by Apple, with subscription status managed through RevenueCat.</li>
   </ul>
@@ -132,9 +133,16 @@
   <h2>Team &amp; staff invites (Salon plan)</h2>
   <p>A Salon owner can invite staff using a one-time invite code. When a staff member redeems a code, their account is linked to the salon so they can access the shared workspace. The owner controls what staff can see through in-app sharing settings (for example, whether staff can view client photos or health notes), and the owner can revoke a staff member's access at any time. Revoking access removes that person's ability to open the salon on their device.</p>
 
+  <h2>Your public booking page (Business plans)</h2>
+  <p>Business plans can optionally turn on an <strong>online booking page</strong> — a public web page (at a link such as <code>book.lashcreate.app/your-salon</code>) that you can share or embed on your own website. The page is unauthenticated, so anyone with the link can view it. You control whether it is switched on.</p>
+  <p><strong>What the page shows.</strong> Only the business details you choose to publish: your salon name and location, your logo, an optional <strong>cover banner photo</strong>, your bookable services and (if you enable prices) their prices, your opening hours, and a link to your reviews. These are business details, not your clients' information.</p>
+  <p><strong>Logo and banner images.</strong> Your logo and cover banner are stored in <strong>Firebase Storage</strong> and are publicly readable so the page can display them. When you upload one, the app resizes and compresses it and <strong>strips embedded metadata (such as EXIF and any GPS location)</strong> before storing it.</p>
+  <p><strong>When a client requests a booking.</strong> A visitor chooses a service and time and submits their <strong>name, contact details (phone and/or email), and any notes</strong> for you. We use this to create a booking request for your salon and to email a confirmation. This information becomes part of your salon's bookings and client records described above, with you as the controller. Booking-confirmation emails are sent on our behalf by <strong>Resend</strong>. Nothing is charged through the page — it is a request, and you approve each one.</p>
+
   <h2>How your photos are handled</h2>
   <p><strong>Design tool:</strong> when you take a photo with the camera or pick one from your library, the image is processed entirely on your device and is never uploaded to us. Designs you save are stored locally; if you choose to save a design to Photos, that copy is added to your iOS Photos library.</p>
   <p><strong>Business plans:</strong> client profile photos and saved design snapshots are uploaded to your salon's private cloud storage (Firebase Storage for the Salon plan, or your private iCloud for the Individual plan) so they sync to your team and devices. They are stored privately, used only to show those images inside the app, and deleted from storage when you delete the associated client, appointment, or salon.</p>
+  <p><strong>Booking-page logo and cover banner</strong> are different: because your booking page is public, these two images are stored so that anyone with the page link can view them. They are business branding you choose to publish, not private client photos. As noted above, embedded metadata is stripped from them on upload.</p>
 
   <h2>Face data</h2>
   <p>Lash Create uses Apple's on-device Vision framework (specifically <code>VNDetectFaceLandmarksRequest</code>) to automatically detect where each eye sits in a photo you take or select. The detection produces only 2D pixel coordinates that describe the position, approximate width, and rotation angle of each eye in the image.</p>
@@ -160,7 +168,7 @@
   <p>Lash Create requests the following permissions and uses them only for the stated purpose:</p>
   <ul>
     <li><strong>Camera</strong> — to capture a new photo for lash design or a client record.</li>
-    <li><strong>Photos (Read)</strong> — to let you pick an existing photo from your library.</li>
+    <li><strong>Photos (Read)</strong> — to let you pick an existing photo from your library (for a lash design, a client record, or your booking-page logo and cover banner).</li>
     <li><strong>Photos (Add)</strong> — to save your finished designs to your iOS Photos library when you choose to.</li>
     <li><strong>Notifications</strong> — if you enable them, to remind you about upcoming appointments and rebookings. These reminders are scheduled on your device.</li>
   </ul>
@@ -172,6 +180,7 @@
     <li><strong>Apple</strong> — App Store payments and (for the Individual plan) iCloud/CloudKit storage.</li>
     <li><strong>Google (Firebase)</strong> — account authentication, cloud database (Firestore), file storage (Firebase Storage), and analytics, for Business plans and app measurement.</li>
     <li><strong>RevenueCat</strong> — subscription status and entitlement management.</li>
+    <li><strong>Resend</strong> — sending account emails and booking-page confirmation emails on our behalf.</li>
     <li><strong>TikTok</strong> — advertising measurement and attribution.</li>
   </ul>
 
