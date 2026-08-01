@@ -4,266 +4,242 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Lash Create — Support</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800;900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --bg: #faf7f4;
-    --fg: #1f1d1a;
-    --muted: #6b6358;
-    --accent: #6b4423;
-    --rule: #e6dfd6;
-    --card: #ffffff;
+  :root{
+    --black:#131110;
+    --char:#1a1714;
+    --text:#f1ece3;
+    --cream:#f4ecdd;
+    --muted:#a99e92;
+    --peach:#e3a585;
+    --rose-grad:linear-gradient(158deg,#f5d8c8 0%,#ecb89e 54%,#dd9d81 100%);
+    --rose-deep:#8a3f29;
+    --line:rgba(244,236,221,.13);
+    --font:'Hanken Grotesk',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif;
+    --serif:'Instrument Serif',Georgia,'Times New Roman',serif;
   }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--fg);
-    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-  }
-  main {
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 48px 24px 96px;
-  }
-  header { margin-bottom: 32px; }
-  .eyebrow {
-    color: var(--accent);
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    margin: 0 0 8px;
-  }
-  h1 {
-    font-size: 32px;
-    line-height: 1.2;
-    margin: 0 0 8px;
-    font-weight: 600;
-  }
-  .lede {
-    color: var(--muted);
-    font-size: 17px;
-    margin: 0;
-  }
-  .contact {
-    background: var(--card);
-    border: 1px solid var(--rule);
-    border-radius: 12px;
-    padding: 20px 24px;
-    margin: 32px 0;
-  }
-  .contact strong {
-    display: block;
-    font-size: 14px;
-    color: var(--muted);
-    font-weight: 600;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    margin-bottom: 4px;
-  }
-  .contact a {
-    font-size: 18px;
-    font-weight: 500;
-  }
-  h2 {
-    font-size: 20px;
-    margin: 40px 0 8px;
-    font-weight: 600;
-  }
-  details {
-    border-top: 1px solid var(--rule);
-    padding: 16px 0;
-  }
-  details:last-of-type { border-bottom: 1px solid var(--rule); }
-  summary {
-    cursor: pointer;
-    font-weight: 600;
-    list-style: none;
-    position: relative;
-    padding-right: 24px;
-  }
-  summary::-webkit-details-marker { display: none; }
-  summary::after {
-    content: "+";
-    position: absolute;
-    right: 0;
-    top: 0;
-    color: var(--accent);
-    font-size: 22px;
-    line-height: 1;
-    font-weight: 400;
-    transition: transform .2s;
-  }
-  details[open] summary::after { content: "−"; }
-  details p, details ul {
-    margin: 12px 0 0;
-    color: var(--fg);
-  }
-  details ul { padding-left: 22px; }
-  details li { margin-bottom: 6px; }
-  a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
-  hr {
-    border: 0;
-    border-top: 1px solid var(--rule);
-    margin: 48px 0;
-  }
-  footer {
-    color: var(--muted);
-    font-size: 14px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 12px;
-  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;background:var(--black);}
+  body{font-family:var(--font);color:var(--text);-webkit-font-smoothing:antialiased;line-height:1.6;}
+  .shell{background:var(--black);padding:clamp(10px,2vw,22px);}
+  .bordered{border:1px solid rgba(244,236,221,.14);border-radius:22px;overflow:hidden;background:var(--char);}
+
+  .topbar{display:flex;align-items:center;gap:18px;padding:20px clamp(20px,5vw,54px);border-bottom:1px solid var(--line);}
+  .brand{display:inline-flex;align-items:center;gap:11px;text-decoration:none;color:#fff;}
+  .brand img{height:30px;width:auto;display:block;}
+  .brand .wm{font-size:19px;letter-spacing:-.01em;}
+  .brand .wm b{font-weight:800;}
+  .brand .wm i{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--peach);}
+  .topbar nav{margin-left:auto;display:flex;gap:26px;}
+  .topbar nav a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:600;}
+  .topbar nav a:hover{color:var(--cream);}
+
+  main{max-width:760px;margin:0 auto;padding:clamp(36px,5vw,72px) clamp(20px,5vw,54px) 90px;}
+
+  .eyebrow{display:inline-flex;align-items:center;gap:12px;font-size:12.5px;font-weight:700;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--peach);margin:0 0 16px;}
+  .eyebrow::before{content:"";width:36px;height:1.5px;background:var(--peach);}
+  h1{font-weight:800;color:#fff;font-size:clamp(34px,5vw,54px);line-height:1.04;letter-spacing:-.03em;margin:0 0 14px;}
+  h1 .it{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--peach);letter-spacing:-.005em;}
+  .lede{color:var(--muted);font-size:17px;margin:0;}
+
+  h2{font-weight:800;font-size:clamp(23px,3vw,30px);letter-spacing:-.02em;color:#fff;margin:52px 0 10px;}
+  p{font-size:16.5px;color:#c8bdb1;line-height:1.74;margin:0 0 16px;}
+  strong{font-weight:700;color:#fff;}
+  a{color:var(--peach);text-decoration:underline;text-underline-offset:2px;text-decoration-color:rgba(227,165,133,.4);}
+  a:hover{text-decoration-color:var(--peach);}
+
+  .contact{border:1px solid var(--line);border-left:3px solid var(--peach);border-radius:14px;
+    padding:20px 24px;margin:30px 0;background:rgba(227,165,133,.06);}
+  .contact strong{display:block;font-size:12px;color:var(--peach);font-weight:700;letter-spacing:.14em;
+    text-transform:uppercase;margin-bottom:6px;}
+  .contact a{font-size:18px;font-weight:600;}
+
+  details{border-top:1px solid var(--line);padding:18px 0;}
+  details:last-of-type{border-bottom:1px solid var(--line);}
+  summary{cursor:pointer;font-weight:700;color:#fff;list-style:none;position:relative;padding-right:28px;font-size:16.5px;letter-spacing:-.01em;}
+  summary::-webkit-details-marker{display:none;}
+  summary::after{content:"+";position:absolute;right:0;top:-2px;color:var(--peach);font-size:24px;line-height:1;font-weight:400;}
+  details[open] summary::after{content:"\2212";}
+  details p{margin:12px 0 0;}
+  details ul{margin:12px 0 0;padding:0;list-style:none;display:grid;gap:9px;}
+  details li{position:relative;padding-left:24px;font-size:16px;color:#c8bdb1;line-height:1.6;}
+  details li::before{content:"";position:absolute;left:2px;top:9px;width:7px;height:7px;border-radius:50%;background:var(--peach);}
+
+  hr{border:0;border-top:1px solid var(--line);margin:52px 0 26px;}
+  footer{color:var(--muted);font-size:14px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;}
 </style>
 </head>
 <body>
-<main>
-  <header>
-    <p class="eyebrow">Lash Create</p>
-    <h1>Support</h1>
-    <p class="lede">Need a hand? We reply within 1–2 business days.</p>
-  </header>
+<div class="shell">
+  <div class="bordered">
 
-  <div class="contact">
-    <strong>Email</strong>
-    <a href="mailto:support@lashcreate.app">support@lashcreate.app</a>
+    <div class="topbar">
+      <a class="brand" href="https://lashcreate.app/"><img src="https://lashcreate.app/assets/logo-black.webp" alt="Lash Create"><span class="wm"><b>Lash</b>&nbsp;<i>Create</i></span></a>
+      <nav>
+        <a href="https://lashcreate.app/">Home</a>
+        <a href="https://lashcreate.app/about">About</a>
+        <a href="./">Privacy</a>
+      </nav>
+    </div>
+
+    <main>
+      <header>
+        <p class="eyebrow">Lash Create</p>
+        <h1>Support</h1>
+        <p class="lede">Need a hand? We reply within 1–2 business days.</p>
+      </header>
+
+      <div class="contact">
+        <strong>Email</strong>
+        <a href="mailto:support@lashcreate.app">support@lashcreate.app</a>
+      </div>
+
+      <h2>Common questions</h2>
+
+      <details>
+        <summary>How do I cancel my subscription?</summary>
+        <p>Subscriptions are managed by Apple, not inside the app. To cancel:</p>
+        <ul>
+          <li>Open <strong>iOS Settings</strong></li>
+          <li>Tap your <strong>name (Apple ID)</strong> at the top</li>
+          <li>Tap <strong>Media &amp; Purchases</strong> → <strong>Subscriptions</strong> (or just tap <strong>Subscriptions</strong>)</li>
+          <li>Tap your <strong>Lash Create</strong> plan (Premium, Individual, or Salon) → <strong>Cancel Subscription</strong></li>
+        </ul>
+        <p>Your plan stays active until the end of the current period, and the related features keep working until then. Cancelling does not delete any salon or client data you've saved.</p>
+      </details>
+
+      <details>
+        <summary>How do I restore a purchase on a new device?</summary>
+        <p>If you've reinstalled the app or signed into a new device with the same Apple ID:</p>
+        <ul>
+          <li>Open Lash Create</li>
+          <li>Tap the <strong>menu (•••)</strong> in the editor header</li>
+          <li>Tap <strong>Manage subscription</strong> (or <strong>Subscribe</strong>) to open the paywall</li>
+          <li>Tap <strong>Restore Purchase</strong></li>
+        </ul>
+        <p>If your subscription is still active on your Apple ID, premium will unlock immediately.</p>
+      </details>
+
+      <details>
+        <summary>The app didn't detect my eyes — what do I do?</summary>
+        <p>Eye detection works best when:</p>
+        <ul>
+          <li>Your face is well-lit, with no harsh shadows across the eyes</li>
+          <li>Both eyes are open and clearly visible</li>
+          <li>You're not wearing glasses or thick fringe covering your eyebrows</li>
+          <li>The photo is in portrait orientation with your face roughly centered</li>
+        </ul>
+        <p>If detection still fails, you can position lashes manually by dragging them onto each eye.</p>
+      </details>
+
+      <details>
+        <summary>Are my photos uploaded anywhere?</summary>
+        <p><strong>Design tool (free &amp; Premium):</strong> no. The pictures you take or pick are processed entirely on your phone, and your saved designs are stored locally.</p>
+        <p><strong>Business plans:</strong> client photos and saved design snapshots are uploaded to your salon's private, secure Firebase storage so they sync across your team and devices. They're stored privately, used to show those images inside the app, and deleted when you delete the client, appointment, or salon.</p>
+        <p><strong>Booking page &amp; directory (Salon plan):</strong> a few images are public because those pages are public — your logo and cover banner, and any recent-work photos you choose to publish (which can include a result photo of a client). These are stored so anyone with your page link can see them, and we strip any embedded metadata (like GPS location) from logos and banners when you upload. You choose what to publish; where a photo shows a client, you're responsible for having their consent, and removing it in the app removes the public copy.</p>
+        <p>The app also includes the TikTok Business SDK and Firebase Analytics for advertising and usage measurement, which collect device and usage data (not your photos). You can decline cross-app tracking when prompted. See our <a href="./">Privacy Policy</a> for full details.</p>
+      </details>
+
+      <details>
+        <summary>Can I show photos of my work on my booking page and directory?</summary>
+        <p>Yes. You can publish photos of recent work — including a result photo saved on a client's record — to your public booking page and, if it's switched on, your directory listing. In the app, open the photo and tap <strong>Share to website</strong>.</p>
+        <p>Because these pages are public, a published photo can be seen by anyone with the link and may show up in search engines. If the photo shows a client, it's their personal data, so only publish it when you have that client's consent to display their image publicly. To take a photo down, delete it in the app — that removes it from your booking page and directory too.</p>
+      </details>
+
+      <details>
+        <summary>How do staff join my salon? (Salon plan)</summary>
+        <p>As the salon owner, generate an invite code in the app and share it with your team member. They download Lash Create, create their own account, and enter the code to join your salon — on their own phone and Apple ID. There's no extra charge per staff member; your Salon plan covers the owner plus up to nine staff.</p>
+      </details>
+
+      <details>
+        <summary>How do I remove a staff member? (Salon plan)</summary>
+        <p>Open your team in the app and revoke the staff member you want to remove. Their access to the salon is cut off the next time their app checks in, while your salon's clients, bookings, and history stay intact.</p>
+      </details>
+
+      <details>
+        <summary>What can my staff see? (Salon plan)</summary>
+        <p>By default staff see the clients assigned to them and the shared salon setup. You control the rest from your sharing settings — for example whether staff can view client photos, health notes, product history, or contact clients. You can change these at any time.</p>
+      </details>
+
+      <details>
+        <summary>How does my online booking page work? (Salon plan)</summary>
+        <p>When you turn on online booking, Lash Create gives your salon a public page at <strong>book.lashcreate.app/your-salon</strong>. Anyone with the link can see the details you choose to publish — your salon name, location, logo, cover banner, the services and prices you've listed, your opening hours, and a link to your Google reviews if you add one.</p>
+        <p>Clients pick a service and a time, then send a booking <strong>request</strong> with their name and contact details. If you haven't set up online payments, nothing is charged on the page and it's paid in the salon; if you have connected Stripe, you can take a deposit or the full amount at booking. The request lands in your app for you to approve and assign to a staff member, and both you and the client get a confirmation email. You can share the link directly, add it to your social profiles, or embed it on your own website.</p>
+      </details>
+
+      <details>
+        <summary>How do I take payments from clients? (Business plans)</summary>
+        <p>Connect a <strong>Stripe</strong> account in the app's payment settings. Once connected, you can take a booking deposit or the full price online, charge a no-show or late-cancellation fee, and sell gift cards and prepaid bundles through your booking page.</p>
+        <p>Clients enter their card details with Stripe, and the money goes <strong>directly to your own Stripe account</strong> — Lash Create never sees or stores card numbers. Refunds and any payment disputes are handled from your own Stripe dashboard. If you'd rather not take payments online, just leave Stripe disconnected and everything is settled in the salon as before.</p>
+      </details>
+
+      <details>
+        <summary>How do I add a cover banner to my booking page? (Salon plan)</summary>
+        <p>In the app, open <strong>Online booking</strong> settings and tap <strong>Salon banner</strong>. Choose a photo and tap Upload — the in-app preview shows how it looks on both desktop and mobile before you publish.</p>
+        <ul>
+          <li><strong>Best size:</strong> 1600 × 600 pixels</li>
+          <li><strong>Aspect ratio:</strong> 8:3 (wide landscape)</li>
+          <li><strong>Minimum size:</strong> 1200 × 450 pixels (smaller images are rejected so your page stays crisp)</li>
+          <li><strong>Formats:</strong> JPG, PNG, or WebP</li>
+        </ul>
+        <p>Your logo and salon name sit over the lower-left of the banner, so keep that corner fairly clear. Images are optimised automatically when you upload, and we strip any embedded metadata (like GPS location) first. The banner appears on your full booking page; the smaller embedded booking widget doesn't show it.</p>
+      </details>
+
+      <details>
+        <summary>Will my salon stay in the directory if my plan ends? (Salon plan)</summary>
+        <p>Yes — if you've listed your salon in the public directory at <strong>lashcreate.app/directory</strong>, your listing stays visible for up to 30 days after your plan ends, so you don't lose your place while you decide whether to renew. During that time online booking is switched off, so the listing still shows your salon but doesn't take new requests. Renew within those 30 days and everything carries on as before; after that the listing is removed. You can also remove your listing at any time by turning off directory listing in the app.</p>
+      </details>
+
+      <details>
+        <summary>Why does the booking page show an "approximate total"?</summary>
+        <p>Some lash styles vary in length or finish, so the price shown is a guide based on the service you pick. Your artist confirms the final price in the salon once they've seen what you'd like — there are no hidden charges. If the salon takes a deposit online, it's shown clearly at checkout and comes off your final total.</p>
+      </details>
+
+      <details>
+        <summary>How do I delete my account or my salon data?</summary>
+        <p>You can delete individual clients, appointments, and other records from inside the app at any time — deleting a record also removes its photos from cloud storage, including any copy you published to your booking page or directory.</p>
+        <p>To delete your whole account and the salon data tied to it, email <a href="mailto:support@lashcreate.app">support@lashcreate.app</a> and we'll remove it.</p>
+      </details>
+
+      <details>
+        <summary>Whose responsibility is my clients' information?</summary>
+        <p>The client details you enter belong to you and your clients — we store them on your behalf so you can run your business, and we don't use them for anything else. You're responsible for having your clients' consent to keep their details (including any health notes) and to publish any photo that shows a client, and for handling their requests about their own data. We're happy to help if you need to export or delete records.</p>
+      </details>
+
+      <details>
+        <summary>I was charged but premium isn't unlocking.</summary>
+        <p>Try these in order:</p>
+        <ul>
+          <li>Force-quit and reopen Lash Create — purchase status often refreshes on relaunch</li>
+          <li>Tap the <strong>menu (•••)</strong> → <strong>Manage subscription</strong> → <strong>Restore Purchase</strong></li>
+          <li>Confirm the purchase appears under <strong>iOS Settings → your Apple ID → Subscriptions</strong></li>
+        </ul>
+        <p><strong>Salon plan:</strong> If you're the owner, give it a few moments after purchasing, then reopen the app — your plan unlocks once the payment is confirmed. Staff unlock automatically once the owner's plan is active and their phone is online; staff don't need to restore anything.</p>
+        <p>If premium still hasn't unlocked, email us with a screenshot of your subscription page and we'll sort it.</p>
+      </details>
+
+      <details>
+        <summary>Can I get a refund?</summary>
+        <p>App Store refunds are handled directly by Apple. Visit <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>, sign in with your Apple ID, find your Lash Create purchase, and request a refund.</p>
+      </details>
+
+      <details>
+        <summary>Is Lash Create available on iPad / Mac?</summary>
+        <p>Lash Create runs on iPhone and iPad with iOS / iPadOS 17 or later. It is not currently optimized for Mac.</p>
+      </details>
+
+      <hr>
+      <footer>
+        <span>© 2026 Fat Octopus Apps</span>
+        <a href="./">Privacy Policy</a>
+      </footer>
+    </main>
+
   </div>
-
-  <h2>Common questions</h2>
-
-  <details>
-    <summary>How do I cancel my subscription?</summary>
-    <p>Subscriptions are managed by Apple, not inside the app. To cancel:</p>
-    <ul>
-      <li>Open <strong>iOS Settings</strong></li>
-      <li>Tap your <strong>name (Apple ID)</strong> at the top</li>
-      <li>Tap <strong>Media &amp; Purchases</strong> → <strong>Subscriptions</strong> (or just tap <strong>Subscriptions</strong>)</li>
-      <li>Tap your <strong>Lash Create</strong> plan (Premium, Individual, or Salon) → <strong>Cancel Subscription</strong></li>
-    </ul>
-    <p>Your plan stays active until the end of the current period, and the related features keep working until then. Cancelling does not delete any salon or client data you've saved.</p>
-  </details>
-
-  <details>
-    <summary>How do I restore a purchase on a new device?</summary>
-    <p>If you've reinstalled the app or signed into a new device with the same Apple ID:</p>
-    <ul>
-      <li>Open Lash Create</li>
-      <li>Tap the <strong>menu (•••)</strong> in the editor header</li>
-      <li>Tap <strong>Manage subscription</strong> (or <strong>Subscribe</strong>) to open the paywall</li>
-      <li>Tap <strong>Restore Purchase</strong></li>
-    </ul>
-    <p>If your subscription is still active on your Apple ID, premium will unlock immediately.</p>
-  </details>
-
-  <details>
-    <summary>The app didn't detect my eyes — what do I do?</summary>
-    <p>Eye detection works best when:</p>
-    <ul>
-      <li>Your face is well-lit, with no harsh shadows across the eyes</li>
-      <li>Both eyes are open and clearly visible</li>
-      <li>You're not wearing glasses or thick fringe covering your eyebrows</li>
-      <li>The photo is in portrait orientation with your face roughly centered</li>
-    </ul>
-    <p>If detection still fails, you can position lashes manually by dragging them onto each eye.</p>
-  </details>
-
-  <details>
-    <summary>Are my photos uploaded anywhere?</summary>
-    <p><strong>Design tool (free &amp; Premium):</strong> no. The pictures you take or pick are processed entirely on your phone, and your saved designs are stored locally.</p>
-    <p><strong>Business plans:</strong> client photos and saved design snapshots are uploaded to your salon's private, secure Firebase storage so they sync across your team and devices. They're stored privately, used only inside the app, and deleted when you delete the client, appointment, or salon.</p>
-    <p><strong>Booking page (Salon plan):</strong> your logo and cover banner are the exception — because your booking page is public, those two images are stored so anyone with your page link can see them. They're business branding you choose to publish, and we strip any embedded metadata (like GPS location) from them when you upload.</p>
-    <p>The app also includes the TikTok Business SDK and Firebase Analytics for advertising and usage measurement, which collect device and usage data (not your photos). You can decline cross-app tracking when prompted. See our <a href="./">Privacy Policy</a> for full details.</p>
-  </details>
-
-  <details>
-    <summary>How do staff join my salon? (Salon plan)</summary>
-    <p>As the salon owner, generate an invite code in the app and share it with your team member. They download Lash Create, create their own account, and enter the code to join your salon — on their own phone and Apple ID. There's no extra charge per staff member; your Salon plan covers the owner plus up to nine staff.</p>
-  </details>
-
-  <details>
-    <summary>How do I remove a staff member? (Salon plan)</summary>
-    <p>Open your team in the app and revoke the staff member you want to remove. Their access to the salon is cut off the next time their app checks in, while your salon's clients, bookings, and history stay intact.</p>
-  </details>
-
-  <details>
-    <summary>What can my staff see? (Salon plan)</summary>
-    <p>By default staff see the clients assigned to them and the shared salon setup. You control the rest from your sharing settings — for example whether staff can view client photos, health notes, product history, or contact clients. You can change these at any time.</p>
-  </details>
-
-  <details>
-    <summary>How does my online booking page work? (Salon plan)</summary>
-    <p>When you turn on online booking, Lash Create gives your salon a public page at <strong>book.lashcreate.app/your-salon</strong>. Anyone with the link can see the details you choose to publish — your salon name, location, logo, cover banner, the services and prices you've listed, your opening hours, and a link to your Google reviews if you add one.</p>
-    <p>Clients pick a service and a time, then send a booking <strong>request</strong> with their name and contact details. If you haven't set up online payments, nothing is charged on the page and it's paid in the salon; if you have connected Stripe, you can take a deposit or the full amount at booking. The request lands in your app for you to approve and assign to a staff member, and both you and the client get a confirmation email. You can share the link directly, add it to your social profiles, or embed it on your own website.</p>
-  </details>
-
-  <details>
-    <summary>How do I take payments from clients? (Business plans)</summary>
-    <p>Connect a <strong>Stripe</strong> account in the app's payment settings. Once connected, you can take a booking deposit or the full price online, charge a no-show or late-cancellation fee, and sell gift cards and prepaid bundles through your booking page.</p>
-    <p>Clients enter their card details with Stripe, and the money goes <strong>directly to your own Stripe account</strong> — Lash Create never sees or stores card numbers. Refunds and any payment disputes are handled from your own Stripe dashboard. If you'd rather not take payments online, just leave Stripe disconnected and everything is settled in the salon as before.</p>
-  </details>
-
-  <details>
-    <summary>How do I add a cover banner to my booking page? (Salon plan)</summary>
-    <p>In the app, open <strong>Online booking</strong> settings and tap <strong>Salon banner</strong>. Choose a photo and tap Upload — the in-app preview shows how it looks on both desktop and mobile before you publish.</p>
-    <ul>
-      <li><strong>Best size:</strong> 1600 × 600 pixels</li>
-      <li><strong>Aspect ratio:</strong> 8:3 (wide landscape)</li>
-      <li><strong>Minimum size:</strong> 1200 × 450 pixels (smaller images are rejected so your page stays crisp)</li>
-      <li><strong>Formats:</strong> JPG, PNG, or WebP</li>
-    </ul>
-    <p>Your logo and salon name sit over the lower-left of the banner, so keep that corner fairly clear. Images are optimised automatically when you upload, and we strip any embedded metadata (like GPS location) first. The banner appears on your full booking page; the smaller embedded booking widget doesn't show it.</p>
-  </details>
-
-  <details>
-    <summary>Will my salon stay in the directory if my plan ends? (Salon plan)</summary>
-    <p>Yes — if you've listed your salon in the public directory at <strong>lashcreate.app/directory</strong>, your listing stays visible for up to 30 days after your plan ends, so you don't lose your place while you decide whether to renew. During that time online booking is switched off, so the listing still shows your salon but doesn't take new requests. Renew within those 30 days and everything carries on as before; after that the listing is removed. You can also remove your listing at any time by turning off directory listing in the app.</p>
-  </details>
-
-  <details>
-    <summary>Why does the booking page show an "approximate total"?</summary>
-    <p>Some lash styles vary in length or finish, so the price shown is a guide based on the service you pick. Your artist confirms the final price in the salon once they've seen what you'd like — there are no hidden charges. If the salon takes a deposit online, it's shown clearly at checkout and comes off your final total.</p>
-  </details>
-
-  <details>
-    <summary>How do I delete my account or my salon data?</summary>
-    <p>You can delete individual clients, appointments, and other records from inside the app at any time — deleting a record also removes its photos from cloud storage.</p>
-    <p>To delete your whole account and the salon data tied to it, email <a href="mailto:support@lashcreate.app">support@lashcreate.app</a> and we'll remove it.</p>
-  </details>
-
-  <details>
-    <summary>Whose responsibility is my clients' information?</summary>
-    <p>The client details you enter belong to you and your clients — we store them on your behalf so you can run your business, and we don't use them for anything else. You're responsible for having your clients' consent to keep their details (including any health notes), and for handling their requests about their own data. We're happy to help if you need to export or delete records.</p>
-  </details>
-
-  <details>
-    <summary>I was charged but premium isn't unlocking.</summary>
-    <p>Try these in order:</p>
-    <ul>
-      <li>Force-quit and reopen Lash Create — purchase status often refreshes on relaunch</li>
-      <li>Tap the <strong>menu (•••)</strong> → <strong>Manage subscription</strong> → <strong>Restore Purchase</strong></li>
-      <li>Confirm the purchase appears under <strong>iOS Settings → your Apple ID → Subscriptions</strong></li>
-    </ul>
-    <p><strong>Salon plan:</strong> If you're the owner, give it a few moments after purchasing, then reopen the app — your plan unlocks once the payment is confirmed. Staff unlock automatically once the owner's plan is active and their phone is online; staff don't need to restore anything.</p>
-    <p>If premium still hasn't unlocked, email us with a screenshot of your subscription page and we'll sort it.</p>
-  </details>
-
-  <details>
-    <summary>Can I get a refund?</summary>
-    <p>App Store refunds are handled directly by Apple. Visit <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>, sign in with your Apple ID, find your Lash Create purchase, and request a refund.</p>
-  </details>
-
-  <details>
-    <summary>Is Lash Create available on iPad / Mac?</summary>
-    <p>Lash Create runs on iPhone and iPad with iOS / iPadOS 17 or later. It is not currently optimized for Mac.</p>
-  </details>
-
-  <hr>
-  <footer>
-    <span>© 2026 Fat Octopus Apps</span>
-    <a href="./">Privacy Policy</a>
-  </footer>
-</main>
+</div>
 </body>
 </html>

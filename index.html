@@ -4,226 +4,239 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Lash Create — Privacy Policy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800;900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --bg: #faf7f4;
-    --fg: #1f1d1a;
-    --muted: #6b6358;
-    --accent: #6b4423;
-    --rule: #e6dfd6;
+  :root{
+    --black:#131110;
+    --char:#1a1714;
+    --text:#f1ece3;
+    --cream:#f4ecdd;
+    --muted:#a99e92;
+    --peach:#e3a585;
+    --rose-grad:linear-gradient(158deg,#f5d8c8 0%,#ecb89e 54%,#dd9d81 100%);
+    --rose-ink:#2a1610;
+    --rose-ink-soft:#5e3322;
+    --rose-deep:#8a3f29;
+    --line:rgba(244,236,221,.13);
+    --font:'Hanken Grotesk',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif;
+    --serif:'Instrument Serif',Georgia,'Times New Roman',serif;
   }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--fg);
-    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-  }
-  main {
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 48px 24px 96px;
-  }
-  header { margin-bottom: 32px; }
-  .eyebrow {
-    color: var(--accent);
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    margin: 0 0 8px;
-  }
-  h1 {
-    font-size: 32px;
-    line-height: 1.2;
-    margin: 0 0 8px;
-    font-weight: 600;
-  }
-  .updated {
-    color: var(--muted);
-    font-size: 14px;
-    margin: 0;
-  }
-  h2 {
-    font-size: 20px;
-    margin: 40px 0 12px;
-    font-weight: 600;
-  }
-  h3 {
-    font-size: 16px;
-    margin: 24px 0 8px;
-    font-weight: 600;
-  }
-  p, li { color: var(--fg); }
-  p { margin: 0 0 16px; }
-  ul { padding-left: 22px; margin: 0 0 16px; }
-  li { margin-bottom: 6px; }
-  a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
-  a:hover { text-decoration-thickness: 2px; }
-  hr {
-    border: 0;
-    border-top: 1px solid var(--rule);
-    margin: 48px 0;
-  }
-  footer { color: var(--muted); font-size: 14px; }
-  code {
-    background: #efeae2;
-    padding: 1px 6px;
-    border-radius: 4px;
-    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-    font-size: 13px;
-  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;background:var(--black);}
+  body{font-family:var(--font);color:var(--text);-webkit-font-smoothing:antialiased;line-height:1.6;}
+  .shell{background:var(--black);padding:clamp(10px,2vw,22px);}
+  .bordered{border:1px solid rgba(244,236,221,.14);border-radius:22px;overflow:hidden;background:var(--char);}
+
+  /* header */
+  .topbar{display:flex;align-items:center;gap:18px;padding:20px clamp(20px,5vw,54px);border-bottom:1px solid var(--line);}
+  .brand{display:inline-flex;align-items:center;gap:11px;text-decoration:none;color:#fff;}
+  .brand img{height:30px;width:auto;display:block;}
+  .brand .wm{font-size:19px;letter-spacing:-.01em;}
+  .brand .wm b{font-weight:800;}
+  .brand .wm i{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--peach);}
+  .topbar nav{margin-left:auto;display:flex;gap:26px;}
+  .topbar nav a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:600;}
+  .topbar nav a:hover{color:var(--cream);}
+
+  main{max-width:760px;margin:0 auto;padding:clamp(36px,5vw,72px) clamp(20px,5vw,54px) 90px;}
+
+  .eyebrow{display:inline-flex;align-items:center;gap:12px;font-size:12.5px;font-weight:700;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--peach);margin:0 0 16px;}
+  .eyebrow::before{content:"";width:36px;height:1.5px;background:var(--peach);}
+  h1{font-weight:800;color:#fff;font-size:clamp(34px,5vw,54px);line-height:1.04;letter-spacing:-.03em;margin:0 0 14px;}
+  h1 .it{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--peach);letter-spacing:-.005em;}
+  .updated{color:var(--muted);font-size:14px;margin:0 0 8px;}
+
+  h2{font-weight:800;font-size:clamp(23px,3vw,32px);line-height:1.14;letter-spacing:-.02em;color:#fff;margin:52px 0 14px;}
+  h3{font-size:17.5px;font-weight:700;color:#fff;margin:26px 0 8px;letter-spacing:-.01em;}
+  p{font-size:16.5px;color:#c8bdb1;line-height:1.74;margin:0 0 16px;}
+  strong{font-weight:700;color:#fff;}
+  ul{list-style:none;display:grid;gap:11px;margin:6px 0 18px;padding:0;}
+  ul li{position:relative;padding-left:26px;font-size:16px;color:#c8bdb1;line-height:1.62;}
+  ul li::before{content:"";position:absolute;left:2px;top:9px;width:8px;height:8px;border-radius:50%;background:var(--peach);}
+  a{color:var(--peach);text-decoration:underline;text-underline-offset:2px;text-decoration-color:rgba(227,165,133,.4);}
+  a:hover{text-decoration-color:var(--peach);}
+  code{background:rgba(227,165,133,.12);color:var(--cream);padding:1px 7px;border-radius:5px;
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;}
+  hr{border:0;border-top:1px solid var(--line);margin:56px 0 28px;}
+  footer{color:var(--muted);font-size:14px;}
+
+  /* callout */
+  .answer{margin:22px 0 6px;padding:20px 24px;border:1px solid var(--line);border-left:3px solid var(--peach);
+    border-radius:14px;background:rgba(227,165,133,.06);}
+  .answer .answer-label{display:inline-flex;align-items:center;gap:9px;font-size:12px;font-weight:700;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--peach);margin-bottom:10px;}
+  .answer .answer-label::before{content:"";width:26px;height:1.5px;background:var(--peach);}
+  .answer p{font-size:16.5px;line-height:1.6;color:var(--cream);margin:0;}
 </style>
 </head>
 <body>
-<main>
-  <header>
-    <p class="eyebrow">Lash Create</p>
-    <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: 18 July 2026</p>
-  </header>
+<div class="shell">
+  <div class="bordered">
 
-  <p>This app is provided by Fat Octopus Apps ("we", "us"). This Privacy Policy explains what information Lash Create handles and how. Please read the section that matches how you use the app.</p>
+    <div class="topbar">
+      <a class="brand" href="https://lashcreate.app/"><img src="https://lashcreate.app/assets/logo-black.webp" alt="Lash Create"><span class="wm"><b>Lash</b>&nbsp;<i>Create</i></span></a>
+      <nav>
+        <a href="https://lashcreate.app/">Home</a>
+        <a href="https://lashcreate.app/about">About</a>
+        <a href="./support.html">Support</a>
+      </nav>
+    </div>
 
-  <h2>Two ways to use Lash Create</h2>
-  <p>Lash Create can be used in two different ways, and the privacy practices differ between them:</p>
-  <ul>
-    <li><strong>The design tool (free &amp; Premium).</strong> Take or pick a photo, try lashes on, and save your designs. This works entirely on your device with <strong>no account</strong> and your images are never uploaded to us.</li>
-    <li><strong>Business plans (salon CRM).</strong> Optional paid plans for lash professionals that add client records, bookings, consultations, and a shared team workspace. These plans <strong>require an account</strong> and store your salon's data in the cloud so it syncs across your devices and your team, and is backed up.</li>
-  </ul>
-  <p>Throughout this policy, "Business plans" means the paid Individual and Salon tiers. If you only use the free or Premium design tool, the account and cloud sections below do not apply to you.</p>
+    <main>
+      <header>
+        <p class="eyebrow">Lash Create</p>
+        <h1>Privacy <span class="it">Policy</span></h1>
+        <p class="updated">Last updated: 1 August 2026</p>
+      </header>
 
-  <h2>Summary</h2>
-  <ul>
-    <li>The design tool keeps your photos and designs on your device. We have no server copy of your images.</li>
-    <li>Business plans require an email-and-password account and store the salon data you enter (including your clients' details) in the cloud.</li>
-    <li>Business plans can optionally publish a public booking page. It shows the salon details you choose (including an optional cover photo), and lets clients send you a booking request with their contact details.</li>
-    <li>Business plans can optionally list the salon in a public directory on the web, showing only the business details and photos you choose to publish.</li>
-    <li>Business plans can optionally take payments from clients online — booking deposits, full payment, gift cards, and prepaid bundles — through <strong>Stripe</strong>. Card details go directly to Stripe and the salon's own connected Stripe account; we never see or store card numbers.</li>
-    <li>Business plans include messaging between a salon and its clients, plus a private team chat, and can send push notifications. These are stored in the cloud so they sync across devices.</li>
-    <li>The app includes the TikTok Business SDK and Firebase Analytics for measuring advertising and improving the app. You can decline cross-app tracking when prompted.</li>
-    <li>App subscriptions are processed by Apple, with subscription status managed through RevenueCat.</li>
-  </ul>
+      <p>This app is provided by Fat Octopus Apps ("we", "us"). This Privacy Policy explains what information Lash Create handles and how. Please read the section that matches how you use the app.</p>
 
-  <h2>Account information (Business plans)</h2>
-  <p>To use a Business plan you create an account with your email address and a password. Authentication is handled by <strong>Google Firebase Authentication</strong> on our behalf. We use this to:</p>
-  <ul>
-    <li>Create and secure your account, and sign you in across devices.</li>
-    <li>Send a verification email to confirm your address.</li>
-    <li>Send password-reset emails when you request them.</li>
-  </ul>
-  <p>Firebase stores your email and a securely hashed password, and assigns your account a unique identifier. We use that identifier to link your account to your subscription and to your salon. We never see or store your password in readable form.</p>
-  <p>When you create your salon you can also <strong>optionally</strong> provide a contact phone number. We use it only to help you get set up and to provide account support — for example contacting you by email, phone, or WhatsApp where you've given us a number. Your phone number is kept private: it is never shown on your booking page or public listing, and it is not used for advertising.</p>
+      <h2>Two ways to use Lash Create</h2>
+      <p>Lash Create can be used in two different ways, and the privacy practices differ between them:</p>
+      <ul>
+        <li><strong>The design tool (free &amp; Premium).</strong> Take or pick a photo, try lashes on, and save your designs. This works entirely on your device with <strong>no account</strong> and your images are never uploaded to us.</li>
+        <li><strong>Business plans (salon CRM).</strong> Optional paid plans for lash professionals that add client records, bookings, consultations, and a shared team workspace. These plans <strong>require an account</strong> and store your salon's data in the cloud so it syncs across your devices and your team, and is backed up.</li>
+      </ul>
+      <p>Throughout this policy, "Business plans" means the paid Individual and Salon tiers. If you only use the free or Premium design tool, the account and cloud sections below do not apply to you.</p>
 
-  <h2>Your salon data in the cloud (Business plans)</h2>
-  <p>When you use a Business plan — whether the solo Individual plan or the team Salon plan — the information you enter is stored in <strong>Google Cloud Firestore and Firebase Storage</strong> so it can sync across your devices, be shared securely with any staff you invite (Salon plan), and be backed up. Each salon's data is restricted to that salon's active owner and staff.</p>
-  <p>The salon data we store on your behalf includes your salon setup (name, services, lash and adhesive brands, styles, pricing, promotions and package deals, gift cards, prepaid bundles, and message templates), your team members (names and display colours), bookings and appointment history, lash recipes, inventory and expenses, messages (described below), and your client records (described next).</p>
+      <h2>Summary</h2>
+      <ul>
+        <li>The design tool keeps your photos and designs on your device. We have no server copy of your images.</li>
+        <li>Business plans require an email-and-password account and store the salon data you enter (including your clients' details) in the cloud.</li>
+        <li>Business plans can optionally publish a public booking page. It shows the salon details you choose (including an optional cover photo), and lets clients send you a booking request with their contact details.</li>
+        <li>Business plans can optionally list the salon in a public directory on the web, showing only the business details and photos you choose to publish.</li>
+        <li>Business plans can choose to publish photos of recent work — including a result photo from a client's record — to the booking page and directory. Because a result photo can show a client, you choose which to publish and confirm you have that client's consent; removing a photo in the app also removes the public copy.</li>
+        <li>Business plans can optionally take payments from clients online — booking deposits, full payment, gift cards, and prepaid bundles — through <strong>Stripe</strong>. Card details go directly to Stripe and the salon's own connected Stripe account; we never see or store card numbers.</li>
+        <li>Business plans include messaging between a salon and its clients, plus a private team chat, and can send push notifications. These are stored in the cloud so they sync across devices.</li>
+        <li>The app includes the TikTok Business SDK and Firebase Analytics for measuring advertising and improving the app. You can decline cross-app tracking when prompted.</li>
+        <li>App subscriptions are processed by Apple, with subscription status managed through RevenueCat.</li>
+      </ul>
 
-  <h2>Client information you enter (Business plans)</h2>
-  <p>Business plans let you, as a lash professional, keep records about your own clients. <strong>This is personal information about other people</strong>, so it deserves special care. The records you can store about a client include:</p>
-  <ul>
-    <li><strong>Contact details</strong> — name, phone number, email, address, and social handles (Instagram, WhatsApp), where you choose to enter them.</li>
-    <li><strong>Consultation &amp; health information</strong> — notes such as allergies, sensitivities, eye conditions, lash health, natural-lash retention, patch-test dates, consent status, and intake answers. Some of this is health-related and should be handled accordingly.</li>
-    <li><strong>Appointment &amp; service history</strong> — dates, services, lash styles, products used, payment records, and rebooking dates.</li>
-    <li><strong>Photos</strong> — client profile photos and design snapshots you save against an appointment.</li>
-  </ul>
-  <p><strong>Your responsibilities.</strong> When you enter a client's information you are the controller of that information, and we process it on your behalf to provide the app. You confirm that you have a lawful basis and any necessary consent to store and use your clients' details — including health-related notes — in the app, and that you will respond to your clients' requests about their own data. We act only on your instructions and do not use your client records for any purpose other than running the app for you.</p>
+      <h2>Account information (Business plans)</h2>
+      <p>To use a Business plan you create an account with your email address and a password. Authentication is handled by <strong>Google Firebase Authentication</strong> on our behalf. We use this to:</p>
+      <ul>
+        <li>Create and secure your account, and sign you in across devices.</li>
+        <li>Send a verification email to confirm your address.</li>
+        <li>Send password-reset emails when you request them.</li>
+      </ul>
+      <p>Firebase stores your email and a securely hashed password, and assigns your account a unique identifier. We use that identifier to link your account to your subscription and to your salon. We never see or store your password in readable form.</p>
+      <p>When you create your salon you can also <strong>optionally</strong> provide a contact phone number. We use it only to help you get set up and to provide account support — for example contacting you by email, phone, or WhatsApp where you've given us a number. Your phone number is kept private: it is never shown on your booking page or public listing, and it is not used for advertising.</p>
 
-  <h2>Team &amp; staff invites (Salon plan)</h2>
-  <p>A Salon owner can invite staff using a one-time invite code. When a staff member redeems a code, their account is linked to the salon so they can access the shared workspace. The owner controls what staff can see through in-app sharing settings (for example, whether staff can view client photos or health notes), and the owner can revoke a staff member's access at any time. Revoking access removes that person's ability to open the salon on their device.</p>
+      <h2>Your salon data in the cloud (Business plans)</h2>
+      <p>When you use a Business plan — whether the solo Individual plan or the team Salon plan — the information you enter is stored in <strong>Google Cloud Firestore and Firebase Storage</strong> so it can sync across your devices, be shared securely with any staff you invite (Salon plan), and be backed up. Each salon's data is restricted to that salon's active owner and staff.</p>
+      <p>The salon data we store on your behalf includes your salon setup (name, services, lash and adhesive brands, styles, pricing, promotions and package deals, gift cards, prepaid bundles, and message templates), your team members (names and display colours), bookings and appointment history, lash recipes, inventory and expenses, messages (described below), and your client records (described next).</p>
 
-  <h2>Your public booking page (Business plans)</h2>
-  <p>Business plans can optionally turn on an <strong>online booking page</strong> — a public web page (at a link such as <code>book.lashcreate.app/your-salon</code>) that you can share or embed on your own website. The page is unauthenticated, so anyone with the link can view it. You control whether it is switched on.</p>
-  <p><strong>What the page shows.</strong> Only the business details you choose to publish: your salon name and location, your logo, an optional <strong>cover banner photo</strong>, your bookable services and (if you enable prices) their prices, your opening hours, and a link to your reviews. These are business details, not your clients' information.</p>
-  <p><strong>Logo and banner images.</strong> Your logo and cover banner are stored in <strong>Firebase Storage</strong> and are publicly readable so the page can display them. When you upload one, the app resizes and compresses it and <strong>strips embedded metadata (such as EXIF and any GPS location)</strong> before storing it.</p>
-  <p><strong>When a client requests a booking.</strong> A visitor chooses a service and time and submits their <strong>name, contact details (phone and/or email), and any notes</strong> for you. If the salon uses a promo or friend-referral code, the visitor may also enter that code. We use this to create a booking request for your salon and to email a confirmation. This information becomes part of your salon's bookings and client records described above, with you as the controller. Booking-confirmation emails are sent on our behalf by <strong>Resend</strong>. If the salon has switched on online payments, a deposit or the full amount may be taken at this step (see <em>Online payments</em> below); otherwise the page takes no payment and you approve each request.</p>
+      <h2>Client information you enter (Business plans)</h2>
+      <p>Business plans let you, as a lash professional, keep records about your own clients. <strong>This is personal information about other people</strong>, so it deserves special care. The records you can store about a client include:</p>
+      <ul>
+        <li><strong>Contact details</strong> — name, phone number, email, address, and social handles (Instagram, WhatsApp), where you choose to enter them.</li>
+        <li><strong>Consultation &amp; health information</strong> — notes such as allergies, sensitivities, eye conditions, lash health, natural-lash retention, patch-test dates, consent status, and intake answers. Some of this is health-related and should be handled accordingly.</li>
+        <li><strong>Appointment &amp; service history</strong> — dates, services, lash styles, products used, payment records, and rebooking dates.</li>
+        <li><strong>Photos</strong> — client profile photos, and design snapshots and result photos you save against an appointment. Your client photos stay private to your salon unless you choose to publish a result photo to your booking page or directory listing (see <em>How your photos are handled</em>).</li>
+      </ul>
+      <p><strong>Your responsibilities.</strong> When you enter a client's information you are the controller of that information, and we process it on your behalf to provide the app. You confirm that you have a lawful basis and any necessary consent to store and use your clients' details — including health-related notes — in the app, and that you will respond to your clients' requests about their own data. If you choose to publish a photo that shows a client — for example a result photo shown as recent work on your booking page or directory listing — you confirm you have that client's consent to display their image on a public web page, and you will remove it in the app if they withdraw that consent. We act only on your instructions and do not use your client records for any purpose other than running the app for you.</p>
 
-  <h2>Your public directory listing (Business plans)</h2>
-  <p>Separately from your booking page, you can choose to list your salon in the <strong>public Lash Create directory</strong> on the web (at <code>lashcreate.app/directory</code>). Listing is optional — it appears only if you turn it on and set your salon location — and you can remove it at any time by switching it off in the app.</p>
-  <p><strong>What the listing shows.</strong> Only the details you provide: your salon name and location (country, city, and area), a short tagline, your name, role, photo and introduction, your services and styles, your team members' names, roles and photos, recent-work and facility photos you add, your social links, and a link to your booking page. It never includes your clients' information or your private contact details (such as the phone number above). Because the directory is a public web page, anyone with the link can view what it shows, and the photos on it are stored so they can be displayed publicly.</p>
-  <p><strong>If your subscription ends.</strong> Your listing may remain visible for up to 30 days after a plan lapses, with booking switched off, before it is removed. This gives you time to renew without losing your place in the directory. You can remove the listing sooner at any time from the app.</p>
+      <h2>Team &amp; staff invites (Salon plan)</h2>
+      <p>A Salon owner can invite staff using a one-time invite code. When a staff member redeems a code, their account is linked to the salon so they can access the shared workspace. The owner controls what staff can see through in-app sharing settings (for example, whether staff can view client photos or health notes), and the owner can revoke a staff member's access at any time. Revoking access removes that person's ability to open the salon on their device.</p>
 
-  <h2>Online payments (Business plans)</h2>
-  <p>A salon can optionally connect a <strong>Stripe</strong> account to take payments from clients — for example a booking deposit, the full service price, a no-show or late-cancellation fee, a <strong>gift card</strong> purchase, or a prepaid <strong>bundle</strong>. This is switched off unless the salon sets it up.</p>
-  <p><strong>How card details are handled.</strong> When a client pays, their card and payment details are collected by <strong>Stripe</strong> and charged directly to the salon's own connected Stripe account. Stripe acts as the payment processor. <strong>We never see, handle, or store card numbers.</strong> We store only what's needed to run the app for the salon — the fact and amount of a payment, its status, and the Stripe reference for it — as part of the salon's booking and client records.</p>
-  <p><strong>The salon's Stripe account.</strong> To connect Stripe, the salon owner completes Stripe's own onboarding. The salon is Stripe's customer (a "connected account"), holds the client relationship for those payments, and is responsible for refunds and any payment disputes through their own Stripe dashboard. Stripe's handling of payment data is governed by <a href="https://stripe.com/privacy">Stripe's Privacy Policy</a>.</p>
+      <h2>Your public booking page (Business plans)</h2>
+      <p>Business plans can optionally turn on an <strong>online booking page</strong> — a public web page (at a link such as <code>book.lashcreate.app/your-salon</code>) that you can share or embed on your own website. The page is unauthenticated, so anyone with the link can view it. You control whether it is switched on.</p>
+      <p><strong>What the page shows.</strong> The business details you choose to publish: your salon name and location, your logo, an optional <strong>cover banner photo</strong>, your bookable services and (if you enable prices) their prices, your opening hours, and a link to your reviews. You can also choose to publish photos of recent work to the page. Where a recent-work photo is a result photo that shows a client, it is that client's personal data and you are responsible for having their consent to display it publicly (see <em>How your photos are handled</em>).</p>
+      <p><strong>Logo and banner images.</strong> Your logo and cover banner are stored in <strong>Firebase Storage</strong> and are publicly readable so the page can display them. When you upload one, the app resizes and compresses it and <strong>strips embedded metadata (such as EXIF and any GPS location)</strong> before storing it.</p>
+      <p><strong>When a client requests a booking.</strong> A visitor chooses a service and time and submits their <strong>name, contact details (phone and/or email), and any notes</strong> for you. If the salon uses a promo or friend-referral code, the visitor may also enter that code. We use this to create a booking request for your salon and to email a confirmation. This information becomes part of your salon's bookings and client records described above, with you as the controller. Booking-confirmation emails are sent on our behalf by <strong>Resend</strong>. If the salon has switched on online payments, a deposit or the full amount may be taken at this step (see <em>Online payments</em> below); otherwise the page takes no payment and you approve each request.</p>
 
-  <h2>Messages &amp; notifications (Business plans)</h2>
-  <p>Business plans include messaging so a salon and its clients can chat about a booking, and a private team chat for a Salon's owner and staff. The messages you send are stored in <strong>Google Cloud Firestore</strong> so they sync across devices and, for team chat, are shared with the salon's staff. Client-facing chat can also send automated replies to common questions. As with other salon data, you are the controller of messages you exchange with your clients.</p>
-  <p>To let you and your clients know about new messages, booking requests, and reminders, the app can send <strong>push notifications</strong>. If you allow notifications, we register a device notification token with <strong>Google Firebase Cloud Messaging</strong>, which delivers the notification to your device via Apple's push service. Appointment and rebooking reminders you set are scheduled on your device. You can turn notifications off any time in iOS Settings.</p>
+      <h2>Your public directory listing (Business plans)</h2>
+      <p>Separately from your booking page, you can choose to list your salon in the <strong>public Lash Create directory</strong> on the web (at <code>lashcreate.app/directory</code>). Listing is optional — it appears only if you turn it on and set your salon location — and you can remove it at any time by switching it off in the app.</p>
+      <p><strong>What the listing shows.</strong> Only the details you provide: your salon name and location (country, city, and area), a short tagline, your name, role, photo and introduction, your services and styles, your team members' names, roles and photos, recent-work and facility photos you add, your social links, and a link to your booking page. It never includes your private contact details (such as the phone number above). Recent-work photos you add may include result photos of clients' lashes; where a photo shows a client, you choose to publish it and are responsible for having that client's consent, as set out under <em>Your responsibilities</em>. Because the directory is a public web page, anyone with the link can view what it shows, and the photos on it are stored so they can be displayed publicly.</p>
+      <p><strong>If your subscription ends.</strong> Your listing may remain visible for up to 30 days after a plan lapses, with booking switched off, before it is removed. This gives you time to renew without losing your place in the directory. You can remove the listing sooner at any time from the app.</p>
 
-  <h2>How your photos are handled</h2>
-  <p><strong>Design tool:</strong> when you take a photo with the camera or pick one from your library, the image is processed entirely on your device and is never uploaded to us. Designs you save are stored locally; if you choose to save a design to Photos, that copy is added to your iOS Photos library.</p>
-  <p><strong>Business plans:</strong> client profile photos, saved design snapshots, and result photos are uploaded to your salon's private <strong>Firebase Storage</strong> so they sync to your team and devices. They are stored privately, used only to show those images inside the app, and deleted from storage when you delete the associated client, appointment, or salon.</p>
-  <p><strong>Booking-page logo and cover banner</strong> are different: because your booking page is public, these two images are stored so that anyone with the page link can view them. They are business branding you choose to publish, not private client photos. As noted above, embedded metadata is stripped from them on upload.</p>
+      <h2>Online payments (Business plans)</h2>
+      <p>A salon can optionally connect a <strong>Stripe</strong> account to take payments from clients — for example a booking deposit, the full service price, a no-show or late-cancellation fee, a <strong>gift card</strong> purchase, or a prepaid <strong>bundle</strong>. This is switched off unless the salon sets it up.</p>
+      <p><strong>How card details are handled.</strong> When a client pays, their card and payment details are collected by <strong>Stripe</strong> and charged directly to the salon's own connected Stripe account. Stripe acts as the payment processor. <strong>We never see, handle, or store card numbers.</strong> We store only what's needed to run the app for the salon — the fact and amount of a payment, its status, and the Stripe reference for it — as part of the salon's booking and client records.</p>
+      <p><strong>The salon's Stripe account.</strong> To connect Stripe, the salon owner completes Stripe's own onboarding. The salon is Stripe's customer (a "connected account"), holds the client relationship for those payments, and is responsible for refunds and any payment disputes through their own Stripe dashboard. Stripe's handling of payment data is governed by <a href="https://stripe.com/privacy">Stripe's Privacy Policy</a>.</p>
 
-  <h2>Face data</h2>
-  <p>Lash Create uses Apple's on-device Vision framework (specifically <code>VNDetectFaceLandmarksRequest</code>) to automatically detect where each eye sits in a photo you take or select. The detection produces only 2D pixel coordinates that describe the position, approximate width, and rotation angle of each eye in the image.</p>
-  <p>No facial recognition is performed. No biometric identifiers (face descriptors, face vectors, faceprints, or any equivalent) are created, stored, or transmitted. The eye coordinates are used for one purpose only: to automatically place lash extensions on the correct position over each eye so you don't have to drag them into place manually.</p>
-  <p>The eye coordinates exist only in memory during the current editing session. They are not saved to disk, exported, transmitted to a server, shared with any third party, or used for any purpose other than positioning lashes. They are released from memory as soon as you close the editor, open a different photo, or quit the app.</p>
-  <p>If you save a design, the saved file is the composited image (your photo with the lashes drawn on it). The underlying eye coordinates are not included in any saved file.</p>
+      <h2>Messages &amp; notifications (Business plans)</h2>
+      <p>Business plans include messaging so a salon and its clients can chat about a booking, and a private team chat for a Salon's owner and staff. The messages you send are stored in <strong>Google Cloud Firestore</strong> so they sync across devices and, for team chat, are shared with the salon's staff. Client-facing chat can also send automated replies to common questions. As with other salon data, you are the controller of messages you exchange with your clients.</p>
+      <p>To let you and your clients know about new messages, booking requests, and reminders, the app can send <strong>push notifications</strong>. If you allow notifications, we register a device notification token with <strong>Google Firebase Cloud Messaging</strong>, which delivers the notification to your device via Apple's push service. Appointment and rebooking reminders you set are scheduled on your device. You can turn notifications off any time in iOS Settings.</p>
 
-  <h2>Subscriptions &amp; payments</h2>
-  <p>Lash Create offers auto-renewable subscriptions (Premium for the design tool, and Individual and Salon plans for Business). These <strong>app subscription</strong> payments are processed by Apple via the App Store, and we never see your payment information. (Payments a salon takes from its own clients are separate and handled by Stripe — see <em>Online payments</em> above.)</p>
-  <p>We use <strong>RevenueCat</strong> to manage subscription status and entitlements. When you subscribe, RevenueCat receives your purchase details from Apple (such as the product, price, currency, and Apple's purchase receipt) and an identifier for your account (your account's unique identifier for Business plans, or an anonymous identifier otherwise). This is used only to determine whether your subscription is active and which features to unlock.</p>
-  <p>Apple's handling of purchase data is governed by <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>, and RevenueCat's by <a href="https://www.revenuecat.com/privacy/">RevenueCat's Privacy Policy</a>.</p>
+      <h2>How your photos are handled</h2>
+      <p><strong>Design tool:</strong> when you take a photo with the camera or pick one from your library, the image is processed entirely on your device and is never uploaded to us. Designs you save are stored locally; if you choose to save a design to Photos, that copy is added to your iOS Photos library.</p>
+      <p><strong>Business plans:</strong> client profile photos, saved design snapshots, and result photos are uploaded to your salon's private <strong>Firebase Storage</strong> so they sync to your team and devices. They are stored privately, used to show those images inside the app, and deleted from storage when you delete the associated client, appointment, or salon.</p>
+      <p><strong>Result photos you publish:</strong> you can choose to publish a result photo to your public booking page and directory listing as recent work. When you do, a public copy of that photo is stored in Firebase Storage so those pages can display it, and it can then be seen by anyone with the link and indexed by search engines. Because a result photo can show a client, you publish it on the basis set out under <em>Your public booking page</em> and <em>Your responsibilities</em>. When you delete the result photo in the app, we remove the published copy from your booking page and directory and delete the stored file.</p>
+      <p><strong>Booking-page logo and cover banner</strong> are stored publicly for the same reason: because your booking page is public, these images are stored so that anyone with the page link can view them. They are business branding you choose to publish. As noted above, embedded metadata is stripped from them on upload.</p>
 
-  <h2>Advertising, analytics &amp; tracking</h2>
-  <p>We use two measurement tools to understand how people find and use the app:</p>
-  <ul>
-    <li><strong>TikTok Business SDK</strong> — measures which of our ads lead people to install and subscribe. Through it we collect your device's advertising identifier (IDFA, only if you allow tracking), a TikTok-assigned identifier, install/launch/session activity, and purchase conversion events (product, price, currency). This data is shared with TikTok and may be used to track you across other companies' apps and websites for advertising attribution.</li>
-    <li><strong>Firebase Analytics (Google)</strong> — measures in-app usage (such as which screens and features are used and the steps of the onboarding and purchase funnels) to improve the app. Events include product identifiers and basic interaction data, not your name, your clients' details, or your photos.</li>
-  </ul>
-  <p>Because the TikTok SDK involves tracking, iOS asks for your permission through the App Tracking Transparency prompt. If you choose "Ask App Not to Track," your IDFA is not shared and measurement relies on Apple's privacy-preserving methods (SKAdNetwork) instead. You can change this any time in <code>Settings → Privacy &amp; Security → Tracking</code>.</p>
-  <p>TikTok's handling of this data is governed by <a href="https://www.tiktok.com/legal/page/global/privacy-policy/en">TikTok's Privacy Policy</a>, and Google's by <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.</p>
+      <h2>Face data</h2>
+      <p>Lash Create uses Apple's on-device Vision framework (specifically <code>VNDetectFaceLandmarksRequest</code>) to automatically detect where each eye sits in a photo you take or select. The detection produces only 2D pixel coordinates that describe the position, approximate width, and rotation angle of each eye in the image.</p>
+      <p>No facial recognition is performed. No biometric identifiers (face descriptors, face vectors, faceprints, or any equivalent) are created, stored, or transmitted. The eye coordinates are used for one purpose only: to automatically place lash extensions on the correct position over each eye so you don't have to drag them into place manually.</p>
+      <p>The eye coordinates exist only in memory during the current editing session. They are not saved to disk, exported, transmitted to a server, shared with any third party, or used for any purpose other than positioning lashes. They are released from memory as soon as you close the editor, open a different photo, or quit the app.</p>
+      <p>If you save a design, the saved file is the composited image (your photo with the lashes drawn on it). The underlying eye coordinates are not included in any saved file.</p>
 
-  <h2>Permissions</h2>
-  <p>Lash Create requests the following permissions and uses them only for the stated purpose:</p>
-  <ul>
-    <li><strong>Camera</strong> — to capture a new photo for lash design or a client record.</li>
-    <li><strong>Photos (Read)</strong> — to let you pick an existing photo from your library (for a lash design, a client record, or your booking-page logo and cover banner).</li>
-    <li><strong>Photos (Add)</strong> — to save your finished designs to your iOS Photos library when you choose to.</li>
-    <li><strong>Notifications</strong> — if you enable them, to remind you about upcoming appointments and rebookings (scheduled on your device), and to alert you to new messages and booking requests (sent as push notifications via Firebase Cloud Messaging).</li>
-  </ul>
-  <p>You can revoke any of these permissions at any time in iOS Settings.</p>
+      <h2>Subscriptions &amp; payments</h2>
+      <p>Lash Create offers auto-renewable subscriptions (Premium for the design tool, and Individual and Salon plans for Business). These <strong>app subscription</strong> payments are processed by Apple via the App Store, and we never see your payment information. (Payments a salon takes from its own clients are separate and handled by Stripe — see <em>Online payments</em> above.)</p>
+      <p>We use <strong>RevenueCat</strong> to manage subscription status and entitlements. When you subscribe, RevenueCat receives your purchase details from Apple (such as the product, price, currency, and Apple's purchase receipt) and an identifier for your account (your account's unique identifier for Business plans, or an anonymous identifier otherwise). This is used only to determine whether your subscription is active and which features to unlock.</p>
+      <p>Apple's handling of purchase data is governed by <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>, and RevenueCat's by <a href="https://www.revenuecat.com/privacy/">RevenueCat's Privacy Policy</a>.</p>
 
-  <h2>Service providers</h2>
-  <p>We share data only with the providers needed to run the app, and only for that purpose:</p>
-  <ul>
-    <li><strong>Apple</strong> — App Store subscription payments and push-notification delivery.</li>
-    <li><strong>Google (Firebase)</strong> — account authentication, cloud database (Firestore), file storage (Firebase Storage), push notifications (Cloud Messaging), and analytics, for Business plans and app measurement.</li>
-    <li><strong>Stripe</strong> — processing the payments a salon takes from its own clients (deposits, full payment, no-show fees, gift cards, and bundles).</li>
-    <li><strong>RevenueCat</strong> — subscription status and entitlement management.</li>
-    <li><strong>Resend</strong> — sending account emails and booking-page confirmation emails on our behalf.</li>
-    <li><strong>TikTok</strong> — advertising measurement and attribution.</li>
-  </ul>
+      <h2>Advertising, analytics &amp; tracking</h2>
+      <p>We use two measurement tools to understand how people find and use the app:</p>
+      <ul>
+        <li><strong>TikTok Business SDK</strong> — measures which of our ads lead people to install and subscribe. Through it we collect your device's advertising identifier (IDFA, only if you allow tracking), a TikTok-assigned identifier, install/launch/session activity, and purchase conversion events (product, price, currency). This data is shared with TikTok and may be used to track you across other companies' apps and websites for advertising attribution.</li>
+        <li><strong>Firebase Analytics (Google)</strong> — measures in-app usage (such as which screens and features are used and the steps of the onboarding and purchase funnels) to improve the app. Events include product identifiers and basic interaction data, not your name, your clients' details, or your photos.</li>
+      </ul>
+      <p>Because the TikTok SDK involves tracking, iOS asks for your permission through the App Tracking Transparency prompt. If you choose "Ask App Not to Track," your IDFA is not shared and measurement relies on Apple's privacy-preserving methods (SKAdNetwork) instead. You can change this any time in <code>Settings → Privacy &amp; Security → Tracking</code>.</p>
+      <p>TikTok's handling of this data is governed by <a href="https://www.tiktok.com/legal/page/global/privacy-policy/en">TikTok's Privacy Policy</a>, and Google's by <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.</p>
 
-  <h2>Data retention &amp; deletion</h2>
-  <p>You stay in control of your data:</p>
-  <ul>
-    <li><strong>Client and salon records.</strong> You can delete individual clients, appointments, or other records from inside the app at any time; deleting a record also deletes its associated photos from cloud storage.</li>
-    <li><strong>Your account and salon.</strong> To delete your account and the salon data associated with it, contact us at <a href="mailto:support@lashcreate.app">support@lashcreate.app</a> and we will delete it.</li>
-    <li><strong>Subscriptions.</strong> You can cancel any time in iOS Settings; cancelling does not delete your data.</li>
-  </ul>
+      <h2>Permissions</h2>
+      <p>Lash Create requests the following permissions and uses them only for the stated purpose:</p>
+      <ul>
+        <li><strong>Camera</strong> — to capture a new photo for lash design or a client record.</li>
+        <li><strong>Photos (Read)</strong> — to let you pick an existing photo from your library (for a lash design, a client record, or your booking-page logo and cover banner).</li>
+        <li><strong>Photos (Add)</strong> — to save your finished designs to your iOS Photos library when you choose to.</li>
+        <li><strong>Notifications</strong> — if you enable them, to remind you about upcoming appointments and rebookings (scheduled on your device), and to alert you to new messages and booking requests (sent as push notifications via Firebase Cloud Messaging).</li>
+      </ul>
+      <p>You can revoke any of these permissions at any time in iOS Settings.</p>
 
-  <h2>Security</h2>
-  <p>Data sent to and from the cloud is encrypted in transit. Account access is protected by your email and password, and salon data is restricted so that only the salon's active owner and staff can access it. No method of storage or transmission is completely secure, but we take reasonable steps to protect your information.</p>
+      <h2>Service providers</h2>
+      <p>We share data only with the providers needed to run the app, and only for that purpose:</p>
+      <ul>
+        <li><strong>Apple</strong> — App Store subscription payments and push-notification delivery.</li>
+        <li><strong>Google (Firebase)</strong> — account authentication, cloud database (Firestore), file storage (Firebase Storage), push notifications (Cloud Messaging), and analytics, for Business plans and app measurement.</li>
+        <li><strong>Stripe</strong> — processing the payments a salon takes from its own clients (deposits, full payment, no-show fees, gift cards, and bundles).</li>
+        <li><strong>RevenueCat</strong> — subscription status and entitlement management.</li>
+        <li><strong>Resend</strong> — sending account emails and booking-page confirmation emails on our behalf.</li>
+        <li><strong>TikTok</strong> — advertising measurement and attribution.</li>
+      </ul>
 
-  <h2>International transfers</h2>
-  <p>Our service providers, including Google, Stripe, RevenueCat, and TikTok, may process data on servers located in the United States and other countries. Where data is transferred internationally, those providers apply appropriate safeguards.</p>
+      <h2>Data retention &amp; deletion</h2>
+      <p>You stay in control of your data:</p>
+      <ul>
+        <li><strong>Client and salon records.</strong> You can delete individual clients, appointments, or other records from inside the app at any time; deleting a record also deletes its associated photos from cloud storage, and if a result photo was published to your booking page or directory, deleting it also removes the public copy.</li>
+        <li><strong>Your account and salon.</strong> To delete your account and the salon data associated with it, contact us at <a href="mailto:support@lashcreate.app">support@lashcreate.app</a> and we will delete it.</li>
+        <li><strong>Subscriptions.</strong> You can cancel any time in iOS Settings; cancelling does not delete your data.</li>
+      </ul>
 
-  <h2>Children</h2>
-  <p>Lash Create is not directed to children. We do not knowingly collect personal information from children under 13, and the advertising measurement described above relies on tracking only where permission has been granted through iOS. If you believe a child has used the app, contact us and we will help.</p>
+      <h2>Security</h2>
+      <p>Data sent to and from the cloud is encrypted in transit. Account access is protected by your email and password, and salon data is restricted so that only the salon's active owner and staff can access it. No method of storage or transmission is completely secure, but we take reasonable steps to protect your information.</p>
 
-  <h2>Changes to this Privacy Policy</h2>
-  <p>We may update this Privacy Policy from time to time. The latest version will always be available at this URL. The "Last updated" date above will reflect any changes.</p>
+      <h2>International transfers</h2>
+      <p>Our service providers, including Google, Stripe, RevenueCat, and TikTok, may process data on servers located in the United States and other countries. Where data is transferred internationally, those providers apply appropriate safeguards.</p>
 
-  <h2>Contact</h2>
-  <p>Questions about this Privacy Policy, or a request about your data? Email <a href="mailto:support@lashcreate.app">support@lashcreate.app</a> — we reply within 1–2 business days.</p>
+      <h2>Children</h2>
+      <p>Lash Create is not directed to children. We do not knowingly collect personal information from children under 13, and the advertising measurement described above relies on tracking only where permission has been granted through iOS. If you believe a child has used the app, contact us and we will help.</p>
 
-  <hr>
-  <footer>© 2026 Fat Octopus Apps</footer>
-</main>
+      <h2>Changes to this Privacy Policy</h2>
+      <p>We may update this Privacy Policy from time to time. The latest version will always be available at this URL. The "Last updated" date above will reflect any changes.</p>
+
+      <h2>Contact</h2>
+      <p>Questions about this Privacy Policy, or a request about your data? Email <a href="mailto:support@lashcreate.app">support@lashcreate.app</a> — we reply within 1–2 business days.</p>
+
+      <hr>
+      <footer>© 2026 Fat Octopus Apps</footer>
+    </main>
+
+  </div>
+</div>
 </body>
 </html>
