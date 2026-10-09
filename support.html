@@ -69,6 +69,16 @@
   details li{position:relative;padding-left:24px;font-size:16px;color:#c8bdb1;line-height:1.6;}
   details li::before{content:"";position:absolute;left:2px;top:9px;width:7px;height:7px;border-radius:50%;background:var(--peach);}
 
+  .release{border:1px solid var(--line);border-radius:16px;padding:26px clamp(20px,4vw,30px);margin:34px 0 0;
+    background:rgba(244,236,221,.03);}
+  .release h2{margin:0 0 4px;font-size:clamp(21px,2.6vw,25px);}
+  .release .ver{font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--peach);
+    margin:0 0 14px;}
+  .release ul{margin:0;padding:0;list-style:none;display:grid;gap:11px;}
+  .release li{position:relative;padding-left:24px;font-size:16px;color:#c8bdb1;line-height:1.62;}
+  .release li::before{content:"";position:absolute;left:2px;top:9px;width:7px;height:7px;border-radius:50%;
+    background:var(--peach);}
+
   hr{border:0;border-top:1px solid var(--line);margin:52px 0 26px;}
   footer{color:var(--muted);font-size:14px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;}
 </style>
@@ -97,6 +107,24 @@
         <strong>Email</strong>
         <a href="mailto:support@lashcreate.app">support@lashcreate.app</a>
       </div>
+
+      <section class="release">
+        <p class="ver">Version 2.123</p>
+        <h2>What&rsquo;s new</h2>
+        <ul>
+          <li><strong>An online shop on your booking page.</strong> Sell products with their own options, photos and prices. Clients add to a bag and either have it delivered or collect it at their next appointment, paying by card through your Stripe account.</li>
+          <li><strong>Orders where the rest of your day is.</strong> New orders appear on Today and in Calendar, you can search and export them, print a postage label, send a posted email with a tracking link, and scan the barcode on a parcel to open its order.</li>
+          <li><strong>A waitlist, so a full day stops being a dead end.</strong> Clients can ask for another day or time, every entry records what kind of no it was, and you reply with an offer link that books that one slot, once, by WhatsApp, Messages or email.</li>
+          <li><strong>Working hours for everyone on the team.</strong> Full time, part time and freelance patterns, hours you set by dragging, and one calendar for days off. The booking page and your diary now answer &ldquo;who is working&rdquo; the same way.</li>
+          <li><strong>Consent forms clients sign before they arrive.</strong> Write your own questions, say which services each form covers, and the client completes and signs it as part of booking online.</li>
+          <li><strong>Your bookings in your own calendar.</strong> Appointments and days off can be written into your iPhone calendar and kept up to date as they change.</li>
+          <li><strong>Any service length, to the minute.</strong> Type the number or step it, so 20 minutes and 2 hr 20 are both just a service length now.</li>
+          <li><strong>Your time zone follows your salon&rsquo;s address.</strong> Travelling no longer moves the times your booking page offers.</li>
+          <li><strong>Stock removals ask why.</strong> A miscount is a correction and never shows up as a loss, and it can always be undone.</li>
+          <li><strong>Promotions in one feed</strong>, a first time client offer on your booking page, and clearer rules for cancelling a gift card or package session.</li>
+          <li><strong>Translated throughout.</strong> The screens that were still English are now in Arabic, French, German, Italian and Spanish like the rest of the app.</li>
+        </ul>
+      </section>
 
       <h2>Common questions</h2>
 
@@ -166,9 +194,56 @@
       </details>
 
       <details>
-        <summary>How does my online booking page work? (Salon plan)</summary>
+        <summary>How does my online booking page work? (Business plans)</summary>
         <p>When you turn on online booking, Lash Create gives your salon a public page at <strong>book.lashcreate.app/your-salon</strong>. Anyone with the link can see the details you choose to publish — your salon name, location, logo, cover banner, the services and prices you've listed, your opening hours, and a link to your Google reviews if you add one.</p>
         <p>Clients pick a service and a time, then send a booking <strong>request</strong> with their name and contact details. If you haven't set up online payments, nothing is charged on the page and it's paid in the salon; if you have connected Stripe, you can take a deposit or the full amount at booking. The request lands in your app for you to approve and assign to a staff member, and both you and the client get a confirmation email. You can share the link directly, add it to your social profiles, or embed it on your own website.</p>
+      </details>
+
+      <details>
+        <summary>Can I sell products through my booking page? (Business plans)</summary>
+        <p>Yes. Turn on <strong>Shop</strong> in the app and add your products with their photos, options and prices. They appear on your booking page, where a client fills a bag and checks out with their name, email, phone and either a delivery address or a note to collect at their next appointment. You set your own delivery charge and a spend that makes it free.</p>
+        <p>Payment goes through your own Stripe account, exactly like a deposit, so you need Stripe connected before the shop can open. Each order lands on Today and in Calendar alongside your appointments, stock comes off automatically, and you can search orders or export a period for your books.</p>
+      </details>
+
+      <details>
+        <summary>How do I post an order? (Business plans)</summary>
+        <p>Open the order and mark it posted. You can print a <strong>postage label</strong> from the app, paste in a tracking link or reference, and the client gets an email saying it is on its way with the tracking on it.</p>
+        <p>If you are packing several at once, tap <strong>Scan</strong> and point the camera at the barcode on the label, or pick a photo of it, and the app opens that parcel&rsquo;s order. Packing and posting do not have to be the same moment.</p>
+      </details>
+
+      <details>
+        <summary>What happens when a client wants a time I cannot give them? (Business plans)</summary>
+        <p>They go on your <strong>waitlist</strong> instead of leaving. A day with nothing free offers to take their details, and if you switch on <em>Let clients ask for another time</em> in your booking rules, they can also name a day and an hour you are not offering at all, including a day you do not normally work.</p>
+        <p>Each entry records what kind of no it was, so you can see when the same Tuesday keeps filling up. When something frees, open the entry and <strong>offer a slot</strong>: the app makes a link that books that one time, once, and you send it by WhatsApp, Messages or email. The first person to open it gets it, deal included, and anyone else is told it has gone.</p>
+      </details>
+
+      <details>
+        <summary>How do I set working hours and days off? (Salon plan)</summary>
+        <p>Open a team member and set how they work: <strong>full time</strong> on the salon&rsquo;s own hours, <strong>part time</strong> on their own weekly pattern, or <strong>freelance</strong> on shifts you add. Hours are set by dragging, and they are always clipped to the salon&rsquo;s opening hours, so nobody is ever offered outside them.</p>
+        <p>Days off are one calendar: tap the days, and past days stay where they are. Your booking page uses exactly the same rule, so a day nobody is in offers no times rather than times nobody can work. Owners have working hours too.</p>
+      </details>
+
+      <details>
+        <summary>Can clients fill in a consent form when they book? (Business plans)</summary>
+        <p>Yes. Write your questions in the app as a general form everyone answers, plus service forms for the treatments that need their own. A service form can cover <strong>everything on your menu</strong>, which keeps covering services you add later, or only the services you tick.</p>
+        <p>When a client books online, the form appears before they confirm and they sign it with their finger on the page. The signed answers land on the booking and on their client record, and you can open the PDF from either. You can also sign one in the salon on your own phone, and it is the same form either way.</p>
+      </details>
+
+      <details>
+        <summary>Can I see my bookings in my own calendar? (Business plans)</summary>
+        <p>Yes. The app can write your appointments and days off into your own iPhone calendar and keep them up to date when something moves or is cancelled. It never reads the rest of your calendar.</p>
+        <p>It goes one way only, from Lash Create into your calendar. An event you create in the Calendar app will not appear in Lash Create, so keep making bookings in the app.</p>
+      </details>
+
+      <details>
+        <summary>How long does each service take? (Business plans)</summary>
+        <p>Open <strong>Services</strong> in your booking settings and tap the time beside a service. Pick one of the common lengths, step it up and down, or tap the number and type it, anywhere from 5 minutes to 10 hours. A service priced per style or listing sets a time on each one.</p>
+        <p>Whatever you set is how much of the diary that booking holds, and it is what clients are shown when they pick the service. If you set a service shorter than your booking slot length, the booking still holds a whole slot; the slot length is in Availability.</p>
+      </details>
+
+      <details>
+        <summary>I am travelling. Will my booking page move with me? (Business plans)</summary>
+        <p>No. Your salon&rsquo;s time zone follows your salon&rsquo;s <strong>address</strong>, not the phone in your pocket, so your opening hours stay where your chairs are while you are away. You can set it by hand in <strong>Storefront &rarr; Configure &rarr; Availability</strong> if your registered address is not where you actually work, and once you set it nothing overrides it.</p>
       </details>
 
       <details>
@@ -178,7 +253,7 @@
       </details>
 
       <details>
-        <summary>How do I add a cover banner to my booking page? (Salon plan)</summary>
+        <summary>How do I add a cover banner to my booking page? (Business plans)</summary>
         <p>In the app, open <strong>Online booking</strong> settings and tap <strong>Salon banner</strong>. Choose a photo and tap Upload — the in-app preview shows how it looks on both desktop and mobile before you publish.</p>
         <ul>
           <li><strong>Best size:</strong> 1600 × 600 pixels</li>
@@ -190,7 +265,7 @@
       </details>
 
       <details>
-        <summary>Will my salon stay in the directory if my plan ends? (Salon plan)</summary>
+        <summary>Will my salon stay in the directory if my plan ends? (Business plans)</summary>
         <p>Yes — if you've listed your salon in the public directory at <strong>lashcreate.app/directory</strong>, your listing stays visible for up to 30 days after your plan ends, so you don't lose your place while you decide whether to renew. During that time online booking is switched off, so the listing still shows your salon but doesn't take new requests. Renew within those 30 days and everything carries on as before; after that the listing is removed. You can also remove your listing at any time by turning off directory listing in the app.</p>
       </details>
 
