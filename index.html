@@ -105,7 +105,7 @@
       <h2>Summary</h2>
       <ul>
         <li>The design tool keeps your photos and designs on your device. We have no server copy of your images.</li>
-        <li>The face tools read where the eyes, brows, lips and hair are in a photo, on your device only. No facial recognition, and nothing about a face is stored or sent anywhere.</li>
+        <li>The face tools work only inside the design studio, on your device. No facial recognition, nothing about a face is stored or sent anywhere, we collect no biometric data, and a saved result is an ordinary picture.</li>
         <li>Business plans require an email-and-password account and store the salon data you enter (including your clients' details) in the cloud.</li>
         <li>Business plans can optionally publish a public booking page. It shows the salon details you choose (including an optional cover photo), and lets clients send you a booking request with their contact details.</li>
         <li>Business plans can optionally list the salon in a public directory on the web, showing only the business details and photos you choose to publish.</li>
@@ -199,9 +199,10 @@
         <li><strong>A face parsing model</strong> (Google's MediaPipe selfie multiclass segmentation model, built into the app) labels each pixel as face skin, hair, body skin, clothing or background, so Beautify moves the face while the hair and background stay where they are.</li>
         <li><strong>A face mesh model</strong> (Google's MediaPipe Face Mesh, built into the app) places 478 points over the face, with a relative depth for each, so the Beautify tools follow the exact edges of the brows, eyes, lips and jaw.</li>
       </ul>
-      <p>No facial recognition is performed. Nothing here can identify who a person is, and no biometric identifiers (face descriptors, face vectors, faceprints, or any equivalent) are created, stored, or transmitted. The points and pixel labels describe only where things are in that one photo, and they are used only to place lashes and to apply the edits you choose.</p>
+      <p>No facial recognition is performed. The face tools are used only in the app's design studio, while you edit a photo. The face points are worked out on your device, are never saved or sent anywhere, and are never used to recognise or identify anyone, or to tell one face from another. They describe only where things are in that one photo, and they are used only to place lashes and to apply the edits you choose.</p>
+      <p>We do not collect face data or biometric data of any kind. None of it ever reaches us, so we cannot see the face points and cannot tell when the face tools are used.</p>
       <p>This face data exists only in memory during the current editing session. It is not saved to disk, exported, transmitted to a server (ours, Google's, Apple's or anyone else's), shared with any third party, or used for any other purpose. It is released from memory as soon as you close the editor, open a different photo, or quit the app. Both face models run inside the app and make no network connection.</p>
-      <p>If you save a design or an edited photo, the saved file is the finished image. The underlying face points and pixel labels are not included in any saved file.</p>
+      <p>When you save a design or an edited photo, it is saved as an ordinary picture, like any other photo: on your phone, and on Business plans also in your salon's private storage as described above. The face points and pixel labels are not part of it and are not kept anywhere.</p>
 
       <h2>Subscriptions &amp; payments</h2>
       <p>Lash Create offers auto-renewable subscriptions (Premium for the design tool, and Individual and Salon plans for Business). These <strong>app subscription</strong> payments are processed by Apple via the App Store, and we never see your payment information. (Payments a salon takes from its own clients are separate and handled by Stripe — see <em>Online payments</em> above.)</p>
