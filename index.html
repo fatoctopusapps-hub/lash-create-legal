@@ -192,14 +192,15 @@
       <p><strong>Booking-page logo and cover banner</strong> are stored publicly for the same reason: because your booking page is public, these images are stored so that anyone with the page link can view them. They are business branding you choose to publish. As noted above, embedded metadata is stripped from them on upload.</p>
 
       <h2>Face data</h2>
-      <p>Lash Create reads the shape of a face in a photo so its editing tools work on the face and nothing else. All of this happens entirely on your device. Three things are used:</p>
+      <p>Lash Create reads the shape of a face in a photo so its editing tools work on the face and nothing else. All of this happens entirely on your device. Four things are used:</p>
       <ul>
         <li><strong>Apple's Vision framework</strong> (<code>VNDetectFaceLandmarksRequest</code>) finds where the eyes, brows, nose, lips and jawline sit, as 2D points in the image. These place lashes over each eye and guide the Beautify tools.</li>
         <li><strong>Apple's person segmentation</strong> (<code>VNGeneratePersonSegmentationRequest</code>) works out which pixels are the person and which are the background, so Beautify never moves the background.</li>
         <li><strong>A face parsing model</strong> (Google's MediaPipe selfie multiclass segmentation model, built into the app) labels each pixel as face skin, hair, body skin, clothing or background, so Beautify moves the face while the hair and background stay where they are.</li>
+        <li><strong>A face mesh model</strong> (Google's MediaPipe Face Mesh, built into the app) places 478 points over the face, with a relative depth for each, so the Beautify tools follow the exact edges of the brows, eyes, lips and jaw.</li>
       </ul>
       <p>No facial recognition is performed. Nothing here can identify who a person is, and no biometric identifiers (face descriptors, face vectors, faceprints, or any equivalent) are created, stored, or transmitted. The points and pixel labels describe only where things are in that one photo, and they are used only to place lashes and to apply the edits you choose.</p>
-      <p>This face data exists only in memory during the current editing session. It is not saved to disk, exported, transmitted to a server (ours, Google's, Apple's or anyone else's), shared with any third party, or used for any other purpose. It is released from memory as soon as you close the editor, open a different photo, or quit the app. The face parsing model runs inside the app and makes no network connection.</p>
+      <p>This face data exists only in memory during the current editing session. It is not saved to disk, exported, transmitted to a server (ours, Google's, Apple's or anyone else's), shared with any third party, or used for any other purpose. It is released from memory as soon as you close the editor, open a different photo, or quit the app. Both face models run inside the app and make no network connection.</p>
       <p>If you save a design or an edited photo, the saved file is the finished image. The underlying face points and pixel labels are not included in any saved file.</p>
 
       <h2>Subscriptions &amp; payments</h2>
@@ -256,7 +257,7 @@
       <p>Lash Create is not directed to children. We do not knowingly collect personal information from children under 13, and the advertising measurement described above relies on tracking only where permission has been granted through iOS. If you believe a child has used the app, contact us and we will help.</p>
 
       <h2>Third-party software</h2>
-      <p>Lash Create includes the MediaPipe selfie multiclass segmentation model, Copyright Google LLC, licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>. The model was converted to Apple's Core ML format to run on device; it is otherwise used as published. Its model card is available from <a href="https://storage.googleapis.com/mediapipe-assets/Model%20Card%20Multiclass%20Segmentation.pdf">Google</a>. Software distributed under the Apache License is provided "as is", without warranties or conditions of any kind.</p>
+      <p>Lash Create includes the MediaPipe selfie multiclass segmentation model, Copyright Google LLC, licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>. The model was converted to Apple's Core ML format to run on device; it is otherwise used as published. Its model card is available from <a href="https://storage.googleapis.com/mediapipe-assets/Model%20Card%20Multiclass%20Segmentation.pdf">Google</a>. It also includes the MediaPipe Face Mesh model (from MediaPipe's face landmarker), Copyright Google LLC, under the same licence, converted to Core ML in the same way. Its model card is available from <a href="https://storage.googleapis.com/mediapipe-assets/Model%20Card%20MediaPipe%20Face%20Mesh%20V2.pdf">Google</a>. Software distributed under the Apache License is provided "as is", without warranties or conditions of any kind.</p>
 
       <h2>Changes to this Privacy Policy</h2>
       <p>We may update this Privacy Policy from time to time. The latest version will always be available at this URL. The "Last updated" date above will reflect any changes.</p>
