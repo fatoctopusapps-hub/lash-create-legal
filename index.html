@@ -89,7 +89,7 @@
       <header>
         <p class="eyebrow">Lash Create</p>
         <h1>Privacy <span class="it">Policy</span></h1>
-        <p class="updated">Last updated: 27 October 2026</p>
+        <p class="updated">Last updated: 29 October 2026</p>
       </header>
 
       <p>This app is provided by Fat Octopus Apps ("we", "us"). This Privacy Policy explains what information Lash Create handles and how. Please read the section that matches how you use the app.</p>
@@ -197,12 +197,12 @@
       <ul>
         <li><strong>Apple's Vision framework</strong> (<code>VNDetectFaceLandmarksRequest</code>) finds where the eyes, brows, nose, lips and jawline sit, as 2D points in the image. These place lashes over each eye and brows over each brow, and guide the Beautify tools.</li>
         <li><strong>Apple's person segmentation</strong> (<code>VNGeneratePersonSegmentationRequest</code>) works out which pixels are the person and which are the background, so Beautify never moves the background and Focus can blur the background alone.</li>
-        <li><strong>A face parsing model</strong> (Google's MediaPipe selfie multiclass segmentation model, built into the app) labels each pixel as face skin, hair, body skin, clothing or background, so Beautify moves the face together with its hair while the background stays where it is.</li>
-        <li><strong>A face mesh model</strong> (Google's MediaPipe Face Mesh, built into the app) places 478 points over the face, with a relative depth for each, so brows can be laid on the brows, Brow bleach can lighten the real brows toward the skin around them, and the Beautify tools follow the exact edges of the brows, eyes, lips and jaw.</li>
+        <li><strong>A face parsing model</strong> (Google's MediaPipe selfie multiclass segmentation model, built into the app) labels each pixel as face skin, hair, body skin, clothing or background, so Beautify moves the face together with its hair while the background stays where it is, Even skin, Wrinkles and the contours touch only face skin, and blemish removal never borrows from hair.</li>
+        <li><strong>A face mesh model</strong> (Google's MediaPipe Face Mesh, built into the app) places 478 points over the face, with a relative depth for each, so brows can be laid on the brows, Brow bleach can lighten the real brows toward the skin around them, and the Beautify tools follow the exact edges of the brows, eyes, lips and jaw. The same points tell Even skin, Wrinkles, Eye bags, Smile lines and the face, nose and philtrum contours where to work, and keep the eyes, brows, lips and nostrils out of them.</li>
       </ul>
       <p>No facial recognition is performed. The face tools are used only in the app's design studio, while you edit a photo. The face points are worked out on your device, are never saved or sent anywhere, and are never used to recognise or identify anyone, or to tell one face from another. They describe only where things are in that one photo, and they are used only to place lashes and brows and to apply the edits you choose.</p>
       <p>We do not collect face data or biometric data of any kind. None of it ever reaches us, so we cannot see the face points and cannot tell when the face tools are used.</p>
-      <p>This face data exists only in memory during the current editing session. It is not saved to disk, exported, transmitted to a server (ours, Google's, Apple's or anyone else's), shared with any third party, or used for any other purpose. It is released from memory as soon as you close the editor, open a different photo, or quit the app. Both face models run inside the app and make no network connection.</p>
+      <p>This face data exists only in memory during the current editing session. It is not saved to disk, exported, transmitted to a server (ours, Google's, Apple's or anyone else's), shared with any third party, or used for any other purpose. It is never used for advertising, marketing, analytics or profiling. It is released from memory as soon as you close the editor, open a different photo, or quit the app. Both face models run inside the app and make no network connection.</p>
       <p>When you save a design or an edited photo, it is saved as an ordinary picture, like any other photo: on your phone, and on Business plans also in your salon's private storage as described above. The face points and pixel labels are not part of it and are not kept anywhere.</p>
 
       <h2>Subscriptions &amp; payments</h2>
